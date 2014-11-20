@@ -48,3 +48,28 @@ let Tlist_Sort_Type = "name"
 
 " configuración de nerdtree
 let NERDTreeIgnore = ['\.pyc$']
+
+" ampliamos número de linea de históricoa
+set history=700
+
+" recargar un fichero cuando cambia
+set autoread
+
+" habilita la detección de tipo de fichero
+filetype on
+
+" habilita plugins específicos para tipos de ficheros
+filetype plugin on
+
+" manejo automático de sangría para python
+filetype plugin indent on
+
+" mejoras en autocompletado
+set wildmenu
+
+" ignora case cuando se busca
+set ignorecase
+
+" codificación por defecto
+set encoding=utf8
+
