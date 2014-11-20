@@ -4,11 +4,15 @@ call pathogen#infect('~/.vimcfg/plugins_forked/{}')
 " Vim-Airline (Barra de estado molona)
 set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#tab_nr_type = 1
+let g:airline#extensions#tabline#show_tab_nr = 1
+let g:airline_theme='badwolf'
 
 " CtrlP (abre ficheros en todas partes)
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_max_height = 20
 let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee'
+map <C-b> :CtrlP<cr>
 
 " mostrar siempre el número de linea
 set number 
@@ -36,6 +40,9 @@ autocmd Filetype css setlocal ts=2 sts=2 sw=2
 autocmd Filetype scss setlocal ts=2 sts=2 sw=2
 autocmd Filetype htmldjango setlocal ts=2 sts=2 sw=2
 autocmd Filetype less setlocal ts=2 sts=2 sw=2
+
+" usar espacios para los tabs
+set expandtab
 
 " esquema de colores
 colorscheme molokai
@@ -72,4 +79,9 @@ set ignorecase
 
 " codificación por defecto
 set encoding=utf8
+
+" activación del uso del mouse en el terminal
+if has('mouse')
+  set mouse=a
+endif
 
