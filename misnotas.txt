@@ -1,0 +1,108 @@
+Notas Sobre Vim
+===============
+
+Movimientos
+-----------
+H - Situar cursor arriba de la pantalla
+M - Situar cursor en medio de la pantalla
+L - Situar cursor abajo del todo de la pantalla
+zz - Centrar página verticalmente
+
+Ctrl+D - Mover media página hacia abajo
+Ctrl+U - Mover media página hacia arriba
+
+:<num> - Salta al número de linea
+
+0 - Salta inicio linea
+$ - Salta final linea
+w - Saltar plabra hacia delante
+b - Saltar palabra hacia atrás
+e - Saltar final de la palabra
+W - Saltar siguiente linea, primer caracter no blanco
+
+gg - Ir al inicio del coument
+G - Ir al final del documento
+
+A - Añade texto al final de la linea
+I - Inserta texto al principio de la linea
+o - Añadir linea debajo del cursor
+O - Añadir linea encima del cursor
+
+u - Deshacer cambios
+Ctrl+R - Rehacer cambios
+
+x - Borra un carácter
+D - Borra el resto de la linea
+dw - Borra una palabra
+dd - Borra una linea
+
+. - Repetir último cambio realizado
+% - Saltar al cierre de un bracket
+
+v: Selecciona curosr
+V: Seleccionar lineas interas
+Ctrl+v: Seleccionar cuadrados
+Ctrl+n: Múltiple cursor
+
+Definiciones/Buscar
+-------------------
+gd - Marca todas las definiciones actuales, donde está situado el cursor
+* - Entra en modo búsqueda de la definición del cursor
+n - Salta a la siguiente búsqueda
+:noh (o ,+Intro) - Limpiar palabras marcadas
+/<string> - Buscar en el documento
+
+Tabs
+----
+:tabe - Crear un nuevo tab
+gt - Movimiento circular entre tabs
+<num>gt - Ir al número de tab indicado
+:tabs - Muestra lista de tabs
+:tabm 0 - Mover tab a la primera posición
+:tabm - Mover tab al final
+:tabm <num> - Mover tab a la posición <num>+1
+:tabn - Ir al tab siguiente
+:tabp - Ir al tab anterior
+
+Splits
+------
+:vsplit - Crea un split vertical
+:osplit - Split horizontal
+C+<cursor> - Moverse entre los splits
+
+Otros
+-----
+:so % - Recargar la configuración de vim
+Ctrl+n - Autocompletar
+= : Corrige tabulación de la area marcada
+Ctrl+y,: Activamos emmet
+:set filetype=<tipo> - Cambiamos tipo de fichero. Tipos: html|htmldjango|etc
+
+Comentar
+-------
+gc - Comenta el bloque visual
+gcc - Comentar una linea
+gcgc - Descomenta el bloc on estiguem
+
+Folding
+-------
+zc - Cerrar bloque
+zo - Abrir bloque
+zi - Cerrar, abrir todos los bloques
+
+Abrir/Cerrar ficheros
+---------------------
+,+nn - Abrir/Cerrar NERTree
+,+f - Ficheros recientes
+,+j - Abrir fichero a partir de la carpeta de trabajo
+
+,+o : Buffer explorer.
+,+bd: Cerrar buffer actual
+,+ba: Cerrar todos los buffers
+,+q: Crea un buffer vacío
+\bv - Buffer explorer, vertical
+\be - Buffer explorer
+
+Rope
+----
+C+c g: Saltar a definición

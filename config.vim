@@ -7,6 +7,8 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#tab_nr_type = 1
 let g:airline#extensions#tabline#show_tab_nr = 1
 let g:airline_theme='badwolf'
+let g:airline_powerline_fonts = 1
+let g:airline_detect_whitespace=0
 
 " CtrlP (abre ficheros en todas partes)
 let g:ctrlp_working_path_mode = 'ra'
@@ -40,6 +42,7 @@ autocmd Filetype css setlocal ts=2 sts=2 sw=2
 autocmd Filetype scss setlocal ts=2 sts=2 sw=2
 autocmd Filetype htmldjango setlocal ts=2 sts=2 sw=2
 autocmd Filetype less setlocal ts=2 sts=2 sw=2
+autocmd Filetype python setlocal ts=4 sts=4 sw=4
 
 " usar espacios para los tabs
 set expandtab
@@ -85,3 +88,8 @@ if has('mouse')
   set mouse=a
 endif
 
+" plugin para snippets
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsSnippetsDir='~/.vimcfg/snippets/'
