@@ -20,6 +20,7 @@ let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_max_height = 20
 let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee\^\.pyc\^.hg\'
 map <C-b> :CtrlP<cr>
+let g:ctrlp_extensions = ['funky']
 
 " mostrar siempre el número de linea
 set number 
@@ -102,4 +103,6 @@ set noswapfile
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-" let g:UltiSnipsSnippetsDir='~/.vimcfg/snippets/'
+
+let python_highlight_all = 1
+let python_version_2 = 1
