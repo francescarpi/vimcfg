@@ -1,5 +1,5 @@
 " Auto carga de plugins
-call pathogen#infect('~/.vimcfg/plugins_forked/{}')
+call pathogen#infect('~/.vimcfg/plugins/{}')
 
 " Vim-Airline (Barra de estado molona)
 set laststatus=2
