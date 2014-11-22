@@ -51,6 +51,8 @@ gd - Marca todas las definiciones actuales, donde está situado el cursor
 n - Salta a la siguiente búsqueda
 :noh (o ,+Intro) - Limpiar palabras marcadas
 /<string> - Buscar en el documento
+:vimgrep /patron/gj **/*.ext - Búsqueda recursiva ficheros con extensión .ext
+:copen - Abre ventanita para navegar entre los resultados. (cclose para cerrar)
 
 Tabs
 ----

@@ -10,10 +10,15 @@ let g:airline_theme='badwolf'
 let g:airline_powerline_fonts = 1
 let g:airline_detect_whitespace=0
 
+" funcionalidad para saltar al último tab y alternar
+let g:lasttab = 1
+nmap gl :exe "tabn ".g:lasttab<CR>
+au TabLeave * let g:lasttab = tabpagenr()
+
 " CtrlP (abre ficheros en todas partes)
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_max_height = 20
-let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee'
+let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee\^\.pyc\^.hg\'
 map <C-b> :CtrlP<cr>
 
 " mostrar siempre el número de linea
@@ -88,8 +93,13 @@ if has('mouse')
   set mouse=a
 endif
 
+" desactivamos backups, swaps...
+set nobackup
+set nowb
+set noswapfile
+
 " plugin para snippets
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-let g:UltiSnipsSnippetsDir='~/.vimcfg/snippets/'
+" let g:UltiSnipsSnippetsDir='~/.vimcfg/snippets/'
