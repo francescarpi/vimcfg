@@ -22,7 +22,7 @@ cd .vimcfg
 * taglist: Muestra en una ventana lateral el listado de métodos y atributos de nuestro código Python.
 * tcomment: Nos facilita comentar y descomentar código.
 * ultisnips: Gestión y uso de snippets.
-* vim-airline: Barra de estado colorida
+* vim-airline: Barra de estado colorida. Recomendable instalar *Power line fonts* (https://github.com/Lokaltog/powerline-fonts)
 * vim-javascript: Reconocimiento de sintaxi para javascript
 * vim-markdown: Reconocimiento de sintaxi para markdown.
 * vim-multiple-cursors: Nos permite editar con múltiples cursores.
