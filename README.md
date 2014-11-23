@@ -127,7 +127,7 @@ Abrir/cerrar bloques de código del documento
 ## Navegación de ficheros
 | Comando  | Descripción |
 | ------------- | ------------- |
-| Ctrl+b | Abre ctrlp. Este comando es propio. No viene por defecto |
+| Ctrl+p | Abre ctrlp. |
 | :NERDTree | Abre este plugin para navegar entre archivos |
 | :ls | Listado de buffers |
 | :bd | Cierra un buffer. Opcionalmente se le puede indicar un número |

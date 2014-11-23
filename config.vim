@@ -19,7 +19,6 @@ au TabLeave * let g:lasttab = tabpagenr()
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_max_height = 20
 let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee\^\.pyc\^.hg\'
-map <C-b> :CtrlP<cr>
 let g:ctrlp_extensions = ['funky']
 
 " mostrar siempre el número de linea
