@@ -145,4 +145,7 @@ Abrir/cerrar bloques de código del documento
 
 Solución para cuando pegamos desde fuera y vim nos añade su tabulación. Antes de pegar **:set paste**. Y luego, **:set nopaste**.
 
+## Capturas de pantalla
+
+![Captura 1](screenshots/shot1.png)
 
