@@ -26,6 +26,7 @@ cd .vimcfg
 * vim-javascript: Reconocimiento de sintaxi para javascript
 * vim-markdown: Reconocimiento de sintaxi para markdown.
 * vim-multiple-cursors: Nos permite editar con múltiples cursores.
+* gundo.vim: Permite visualizar un histórico de cambios
 
 ## Movimientos de cursor
 
@@ -57,6 +58,7 @@ cd .vimcfg
 | O | Insertar encima del cursor |
 | u | Deshacer cambios |
 | Ctrl+r | Rehacer cambios |
+| :GundoShow | Muestra árbol de histórico de cambios |
 | x | Borrar un carácter |
 | D | Borrar hasta el final de la linea |
 | dw | Borrar una palabra |
