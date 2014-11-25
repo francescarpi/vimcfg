@@ -12,7 +12,6 @@ cd .vimcfg
 
 ## Plugins instalados
 * auto-pairs: Cierre automático de corchetes, paréntesis, etc.
-* bufexplorer: Funcionalidades extras para la gestión y visualización de buffers
 * ctrlp: Permite localizar ficheros en el entorno de trabajo y abrirlos en la misma pestaña, o nuevas.
 * ctrlp-funky: Extensión de ctrlp para localizar clases y funciones dentro de los ficheros de nuestro entorno.
 * indentLine: Muestra lineas verticales al principio de las identaciones. Ayuda muy visual.
@@ -130,12 +129,15 @@ Abrir/cerrar bloques de código del documento
 | Comando  | Descripción |
 | ------------- | ------------- |
 | Ctrl+p | Abre ctrlp. |
+| Ctrl+f | Cuando está abierto CtrlP cambia a modo fichero |
+| Ctrl+b | Cuando está abierto CtrlP cambia a modo buffers |
 | :NERDTree | Abre este plugin para navegar entre archivos |
 | :ls | Listado de buffers |
 | :bd | Cierra un buffer. Opcionalmente se le puede indicar un número |
 | :b (num) | Va a un buffer concreto |
 | :bn | Siguiente buffer |
 | :bp | Buffer anterior |
+
 
 ## Copiar/pegar
 | Comando  | Descripción |
