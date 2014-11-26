@@ -11,14 +11,12 @@ cd .vimcfg
 ```
 
 ## Plugins instalados
-* auto-pairs: Cierre automático de corchetes, paréntesis, etc.
 * ctrlp: Permite localizar ficheros en el entorno de trabajo y abrirlos en la misma pestaña, o nuevas.
 * ctrlp-funky: Extensión de ctrlp para localizar clases y funciones dentro de los ficheros de nuestro entorno.
 * indentLine: Muestra lineas verticales al principio de las identaciones. Ayuda muy visual.
 * molokay: Esquema de colores.
 * nerdtree: Navegador de archivos en formato árbol
 * python-syntax: Reconocimiento de sintaxi para python.
-* taglist: Muestra en una ventana lateral el listado de métodos y atributos de nuestro código Python.
 * tcomment: Nos facilita comentar y descomentar código.
 * ultisnips: Gestión y uso de snippets.
 * vim-airline: Barra de estado colorida. Recomendable instalar *Power line fonts* (https://github.com/Lokaltog/powerline-fonts)
@@ -128,7 +126,7 @@ Abrir/cerrar bloques de código del documento
 ## Navegación de ficheros
 | Comando  | Descripción |
 | ------------- | ------------- |
-| Ctrl+p | Abre ctrlp. |
+| Ctrl+p | Abre ctrlp. Ctrl+f y Ctrl+b moverse entre distintos tipos de búsqued. Ficheros, buffers... |
 | Ctrl+f | Cuando está abierto CtrlP cambia a modo fichero |
 | Ctrl+b | Cuando está abierto CtrlP cambia a modo buffers |
 | :NERDTree | Abre este plugin para navegar entre archivos |

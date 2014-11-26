@@ -18,7 +18,7 @@ au TabLeave * let g:lasttab = tabpagenr()
 " CtrlP (abre ficheros en todas partes)
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_max_height = 20
-let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee\^\.pyc\^.hg\'
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn|pyc))$'
 let g:ctrlp_extensions = ['funky']
 
 " mostrar siempre el número de linea
@@ -31,7 +31,7 @@ set scrolljump=5
 set scrolloff=3 
 
 " marca de columna límite
-set colorcolumn=80 
+set colorcolumn=120
 
 " permite identar en modo visual, sin salir de él
 vnoremap < <gv
@@ -105,3 +105,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 let python_highlight_all = 1
 let python_version_2 = 1
+
+" colors
+hi MatchParen cterm=bold ctermbg=none ctermfg=yellow
+
