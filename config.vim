@@ -6,6 +6,7 @@ set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#tab_nr_type = 1
 let g:airline#extensions#tabline#show_tab_nr = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline_theme='badwolf'
 let g:airline_powerline_fonts = 1
 let g:airline_detect_whitespace=0

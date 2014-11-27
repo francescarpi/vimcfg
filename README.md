@@ -11,19 +11,19 @@ cd .vimcfg
 ```
 
 ## Plugins instalados
-* ctrlp: Permite localizar ficheros en el entorno de trabajo y abrirlos en la misma pestaña, o nuevas.
-* ctrlp-funky: Extensión de ctrlp para localizar clases y funciones dentro de los ficheros de nuestro entorno.
+* ctrlp: Permite localizar ficheros en el entorno de trabajo y abrirlos en la misma pestaña, o nuevas. (Con la extensión 'funky')
+* flattr.vim: Esquema de colores.
+* gundo.vim: Permite visualizar un histórico de cambios
 * indentLine: Muestra lineas verticales al principio de las identaciones. Ayuda muy visual.
-* molokay: Esquema de colores.
 * nerdtree: Navegador de archivos en formato árbol
 * python-syntax: Reconocimiento de sintaxi para python.
 * tcomment: Nos facilita comentar y descomentar código.
 * ultisnips: Gestión y uso de snippets.
 * vim-airline: Barra de estado colorida. Recomendable instalar *Power line fonts* (https://github.com/Lokaltog/powerline-fonts)
-* vim-javascript: Reconocimiento de sintaxi para javascript
+* vim-javascript-syntax: Reconocimiento de sintaxi para javascript
+* vim-less: Reconocimiento sintaxi para less.
 * vim-markdown: Reconocimiento de sintaxi para markdown.
 * vim-multiple-cursors: Nos permite editar con múltiples cursores.
-* gundo.vim: Permite visualizar un histórico de cambios
 
 ## Movimientos de cursor
 
