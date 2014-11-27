@@ -136,6 +136,11 @@ Abrir/cerrar bloques de código del documento
 | :bn | Siguiente buffer |
 | :bp | Buffer anterior |
 
+Modos de Ctrlp:
+* files: Muestra ficheros de la carpeta de trabajo
+* funky: Muestra métodos y clases del fichero actual.
+* buffers: Muestra listado de buffers
+* mru files: Ficheros abiertos recientemente
 
 ## Copiar/pegar
 | Comando  | Descripción |
