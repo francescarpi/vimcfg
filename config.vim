@@ -111,3 +111,8 @@ let python_version_2 = 1
 " colors
 hi MatchParen cterm=bold ctermbg=none ctermfg=yellow
 
+" modificar el título del terminal
+set title
+
+" asignamos al F2 la función de cambiar entre modo paste
+set pastetoggle=<F2>

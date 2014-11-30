@@ -149,8 +149,7 @@ Modos de Ctrlp:
 | Y | Copia la linea actual, donde estamos |
 | p | Pegar |
 | c | Cortar |
-
-Solución para cuando pegamos desde fuera y vim nos añade su tabulación. Antes de pegar **:set paste**. Y luego, **:set nopaste**.
+| F2 | Cambiar entre modo paste y modo no-paste, para pegar desde el portapapeles del sistema sin que nos haga la identación automática |
 
 ## Capturas de pantalla
 
