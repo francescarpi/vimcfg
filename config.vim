@@ -116,3 +116,4 @@ set title
 
 " asignamos al F2 la función de cambiar entre modo paste
 set pastetoggle=<F2>
+
