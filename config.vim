@@ -91,9 +91,7 @@ set ignorecase
 set encoding=utf8
 
 " activación del uso del mouse en el terminal
-if has('mouse')
-  set mouse=a
-endif
+set mouse=a
 
 " desactivamos backups, swaps...
 set nobackup
