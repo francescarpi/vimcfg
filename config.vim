@@ -19,8 +19,14 @@ au TabLeave * let g:lasttab = tabpagenr()
 " CtrlP (abre ficheros en todas partes)
 let g:ctrlp_working_path_mode = 'a'
 let g:ctrlp_max_height = 20
-let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn|pyc))$'
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(swp|pyc|py\~)$',
+  \ 'link': 'some_bad_symbolic_links',
+  \ }
 let g:ctrlp_extensions = ['funky']
+let g:ctrlp_funky_matchtype = 'path'
+let g:ctrlp_funky_syntax_highlight = 1
 
 " mostrar siempre el número de linea
 set number 
@@ -54,8 +60,7 @@ autocmd Filetype python setlocal ts=4 sts=4 sw=4
 set expandtab
 
 " esquema de colores
-" colorscheme molokai
-colorscheme flattr 
+colorscheme Tomorrow-Night-Bright
 
 " plugin: taglist (permite ver métodos y atributos de clases, etc)
 let Tlist_Show_One_File = 1
