@@ -60,7 +60,8 @@ autocmd Filetype python setlocal ts=4 sts=4 sw=4
 set expandtab
 
 " esquema de colores
-colorscheme Tomorrow-Night-Bright
+colorscheme gruvbox
+set background=dark
 
 " plugin: taglist (permite ver métodos y atributos de clases, etc)
 let Tlist_Show_One_File = 1
