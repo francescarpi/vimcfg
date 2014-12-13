@@ -69,9 +69,6 @@ let Tlist_WinWidth = 50
 let Tlist_Use_SingleClick = 1
 let Tlist_Sort_Type = "name"
 
-" configuración de nerdtree
-let NERDTreeIgnore = ['\.pyc$']
-
 " ampliamos número de linea de históricoa
 set history=700
 
@@ -121,3 +118,5 @@ set title
 " asignamos al F2 la función de cambiar entre modo paste
 set pastetoggle=<F2>
 
+" emmet
+let g:user_emmet_leader_key='<C-x>'

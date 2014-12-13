@@ -12,18 +12,18 @@ cd .vimcfg
 
 ## Plugins instalados
 * ctrlp: Permite localizar ficheros en el entorno de trabajo y abrirlos en la misma pestaña, o nuevas. (Con la extensión 'funky')
-* flattr.vim: Esquema de colores.
+* emmet-vim: Facilita la escritura de código html
 * gundo.vim: Permite visualizar un histórico de cambios
 * indentLine: Muestra lineas verticales al principio de las identaciones. Ayuda muy visual.
-* nerdtree: Navegador de archivos en formato árbol
 * python-syntax: Reconocimiento de sintaxi para python.
 * tcomment: Nos facilita comentar y descomentar código.
 * ultisnips: Gestión y uso de snippets.
-* vim-airline: Barra de estado colorida. Recomendable instalar *Power line fonts* (https://github.com/Lokaltog/powerline-fonts)
+* vim-airline: Barra de estado colorida.
 * vim-javascript-syntax: Reconocimiento de sintaxi para javascript
 * vim-less: Reconocimiento sintaxi para less.
 * vim-markdown: Reconocimiento de sintaxi para markdown.
 * vim-multiple-cursors: Nos permite editar con múltiples cursores.
+* syntastic: Analizador de sintaxy
 
 ## Movimientos de cursor
 
@@ -129,7 +129,6 @@ Abrir/cerrar bloques de código del documento
 | Ctrl+p | Abre ctrlp. Ctrl+f y Ctrl+b moverse entre distintos tipos de búsqued. Ficheros, buffers... |
 | Ctrl+f | Cuando está abierto CtrlP cambia a modo fichero |
 | Ctrl+b | Cuando está abierto CtrlP cambia a modo buffers |
-| :NERDTree | Abre este plugin para navegar entre archivos |
 | :ls | Listado de buffers |
 | :bd | Cierra un buffer. Opcionalmente se le puede indicar un número |
 | :b (num) | Va a un buffer concreto |
@@ -150,6 +149,11 @@ Modos de Ctrlp:
 | p | Pegar |
 | c | Cortar |
 | F2 | Cambiar entre modo paste y modo no-paste, para pegar desde el portapapeles del sistema sin que nos haga la identación automática |
+
+## Emmet
+| Comando  | Descripción |
+| ------------- | ------------- |
+| Ctrl+x+, | Ejecuta emmet |
 
 ## Capturas de pantalla
 
