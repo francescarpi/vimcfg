@@ -19,6 +19,7 @@ cd .vimcfg
 * tcomment: Nos facilita comentar y descomentar código.
 * ultisnips: Gestión y uso de snippets.
 * vim-airline: Barra de estado colorida.
+* vim-easymotion
 * vim-javascript-syntax: Reconocimiento de sintaxi para javascript
 * vim-less: Reconocimiento sintaxi para less.
 * vim-markdown: Reconocimiento de sintaxi para markdown.

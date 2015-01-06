@@ -49,12 +49,14 @@ set cursorline
 
 " configuración de tabulación
 autocmd Filetype html setlocal ts=2 sts=2 sw=2
-autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
-autocmd Filetype css setlocal ts=2 sts=2 sw=2
-autocmd Filetype scss setlocal ts=2 sts=2 sw=2
+autocmd Filetype javascript setlocal ts=4 sts=4 sw=4
+autocmd Filetype css setlocal ts=4 sts=4 sw=4
+autocmd Filetype scss setlocal ts=4 sts=4 sw=4
 autocmd Filetype htmldjango setlocal ts=2 sts=2 sw=2
-autocmd Filetype less setlocal ts=2 sts=2 sw=2
+autocmd Filetype less setlocal ts=4 sts=4 sw=4
 autocmd Filetype python setlocal ts=4 sts=4 sw=4
+autocmd Filetype sh setlocal ts=4 sts=4 sw=4
+autocmd Filetype c setlocal ts=4 sts=4 sw=4
 
 " usar espacios para los tabs
 set expandtab
@@ -120,3 +122,23 @@ set pastetoggle=<F2>
 
 " emmet
 let g:user_emmet_leader_key='<C-x>'
+
+" configuraciones para el modo gui
+if has("gui_running")
+        set guifont=Droid\ Sans\ Mono\ 11
+        set guioptions-=r
+        set guioptions-=R
+        set guioptions-=l
+        set guioptions-=L
+        set guioptions-=b
+        set guioptions=m
+        set guioptions-=T
+endif
+
+" cambiamos tecla de leader
+let mapleader=","
+
+" configuración easymotion
+map  / <Plug>(easymotion-sn)
+omap / <Plug>(easymotion-tn)
+
