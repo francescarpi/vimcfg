@@ -62,7 +62,7 @@ autocmd Filetype c setlocal ts=4 sts=4 sw=4
 set expandtab
 
 " esquema de colores
-colorscheme gruvbox
+colorscheme delek
 set background=dark
 
 " plugin: taglist (permite ver métodos y atributos de clases, etc)
