@@ -57,12 +57,15 @@ autocmd Filetype less setlocal ts=4 sts=4 sw=4
 autocmd Filetype python setlocal ts=4 sts=4 sw=4
 autocmd Filetype sh setlocal ts=4 sts=4 sw=4
 autocmd Filetype c setlocal ts=4 sts=4 sw=4
+autocmd Filetype yaml setlocal ts=4 sts=4 sw=4
 
 " usar espacios para los tabs
 set expandtab
 
 " esquema de colores
-colorscheme delek
+let g:gruvbox_termcolors = 16
+let g:gruvbox_italic=0
+colorscheme gruvbox
 set background=dark
 
 " plugin: taglist (permite ver métodos y atributos de clases, etc)

@@ -46,6 +46,9 @@ cd .vimcfg
 | gg | Saltar a la primera linea del documento |
 | G | Saltar a la última linea del documento |
 | % | Saltar al cierre de un bracket
+| m+<letra,número> | Crea registro guardando la posición en la letra o número indicado |
+| '+<letra,numero>  | Va a la linea del registro indicado |
+| `+<letra,número> | Va a la columna del registro indicado |
 
 ## Edición de texto
 | Comando  | Descripción |
@@ -62,6 +65,7 @@ cd .vimcfg
 | dw | Borrar una palabra |
 | dd | Borrar una linea |
 | Ctrl-n | Autocompletar |
+| Ctrl-space | Autocompletado de jedi |
 | = | Corrige tabulación de la area marcada |
 
 ## Modo visual
