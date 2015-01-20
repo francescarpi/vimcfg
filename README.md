@@ -49,6 +49,8 @@ cd .vimcfg
 | m+<letra,número> | Crea registro guardando la posición en la letra o número indicado |
 | '+<letra,numero>  | Va a la linea del registro indicado |
 | `+<letra,número> | Va a la columna del registro indicado |
+| f+<letra,núm> | Coloca cursor en la letra, número, carácter, etc que hayamos indicado |
+| ; | Repite la última búsqueda |
 
 ## Edición de texto
 | Comando  | Descripción |

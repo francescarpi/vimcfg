@@ -11,11 +11,6 @@ let g:airline_theme='badwolf'
 " let g:airline_powerline_fonts = 1
 let g:airline_detect_whitespace=0
 
-" funcionalidad para saltar al último tab y alternar
-let g:lasttab = 1
-nmap gl :exe "tabn ".g:lasttab<CR>
-au TabLeave * let g:lasttab = tabpagenr()
-
 " CtrlP (abre ficheros en todas partes)
 let g:ctrlp_working_path_mode = 'a'
 let g:ctrlp_max_height = 20
