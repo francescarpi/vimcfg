@@ -35,9 +35,9 @@ set scrolloff=3
 " marca de columna límite
 set colorcolumn=120
 
-" permite identar en modo visual, sin salir de él
-vnoremap < <gv
-vnoremap > >gv 
+" " permite identar en modo visual, sin salir de él
+" vnoremap < <gv
+" vnoremap > >gv 
 
 " Resaltar linea donde está el curosr
 set cursorline
@@ -139,4 +139,8 @@ let mapleader=","
 " configuración easymotion
 map  / <Plug>(easymotion-sn)
 omap / <Plug>(easymotion-tn)
+
+" mejoras para tabs
+nnoremap <C-h> :tabprevious<CR>
+nnoremap <C-l> :tabnext<CR>
 
