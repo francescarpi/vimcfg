@@ -35,10 +35,6 @@ set scrolloff=3
 " marca de columna límite
 set colorcolumn=120
 
-" " permite identar en modo visual, sin salir de él
-" vnoremap < <gv
-" vnoremap > >gv 
-
 " Resaltar linea donde está el curosr
 set cursorline
 
@@ -53,6 +49,7 @@ autocmd Filetype python setlocal ts=4 sts=4 sw=4
 autocmd Filetype sh setlocal ts=4 sts=4 sw=4
 autocmd Filetype c setlocal ts=4 sts=4 sw=4
 autocmd Filetype yaml setlocal ts=4 sts=4 sw=4
+autocmd Filetype arduino setlocal ts=4 sts=4 sw=4
 
 " usar espacios para los tabs
 set expandtab
@@ -136,11 +133,32 @@ endif
 " cambiamos tecla de leader
 let mapleader=","
 
-" configuración easymotion
-map  / <Plug>(easymotion-sn)
-omap / <Plug>(easymotion-tn)
+" configuración search
+set incsearch
+" set hlsearch
 
 " mejoras para tabs
 nnoremap <C-h> :tabprevious<CR>
 nnoremap <C-l> :tabnext<CR>
 
+" shell
+set shell=bash
+
+" activamos syntax
+syntax on
+
+" make backspace work like most other apps
+set backspace=2 
+
+" netrw
+let g:netrw_list_hide= '.*\.pyc$'
+
+" activamos matchit
+set nocompatible
+runtime macros/matchit.vim
+
+" cargamos fichero de tags
+set tags=tags
+
+" activamos neocompl...
+let g:neocomplcache_enable_at_startup = 1
