@@ -7,9 +7,9 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#tab_nr_type = 1
 let g:airline#extensions#tabline#show_tab_nr = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
-let g:airline_theme='badwolf'
+let g:airline_theme='sol'
 " let g:airline_powerline_fonts = 1
-let g:airline_detect_whitespace=0
+" let g:airline_detect_whitespace=0
 
 " CtrlP (abre ficheros en todas partes)
 let g:ctrlp_working_path_mode = 'a'
@@ -162,6 +162,11 @@ runtime macros/matchit.vim
 " cargamos fichero de tags
 set tags=tags
 
+" Tagbar
+nmap <F8> :TagbarToggle<CR> 
+let g:tagbar_autofocus = 1
+let g:tagbar_show_linenumbers = 1
+
 " activamos neocompl...
 let g:neocomplcache_enable_at_startup = 1
 
@@ -170,3 +175,4 @@ let g:neocomplcache_enable_at_startup = 1
 " nnoremap <A-h> :vertical resize +5<cr>
 " nnoremap <A-k> :resize -5<cr>
 " nnoremap <A-j> :resize +5<cr>
+
