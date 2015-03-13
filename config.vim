@@ -100,8 +100,8 @@ set noswapfile
 
 " plugin para snippets
 let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 let python_highlight_all = 1
 let python_version_2 = 1
@@ -120,7 +120,7 @@ let g:user_emmet_leader_key='<C-x>'
 
 " configuraciones para el modo gui
 if has("gui_running")
-        set guifont=Droid\ Sans\ Mono\ 11
+        set guifont=Source\ Code\ Pro\ Light\ 13
         set guioptions-=r
         set guioptions-=R
         set guioptions-=l
@@ -140,6 +140,8 @@ set incsearch
 " mejoras para tabs
 nnoremap <C-h> :tabprevious<CR>
 nnoremap <C-l> :tabnext<CR>
+" nnoremap <C-h> :bnext<CR>
+" nnoremap <C-l> :bprevious<CR>
 
 " shell
 set shell=bash
@@ -162,3 +164,9 @@ set tags=tags
 
 " activamos neocompl...
 let g:neocomplcache_enable_at_startup = 1
+
+" resize current buffer by +/- 5 
+" nnoremap <A-l> :vertical resize -5<cr>
+" nnoremap <A-h> :vertical resize +5<cr>
+" nnoremap <A-k> :resize -5<cr>
+" nnoremap <A-j> :resize +5<cr>
