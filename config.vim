@@ -23,6 +23,9 @@ let g:ctrlp_extensions = ['funky']
 let g:ctrlp_funky_matchtype = 'path'
 let g:ctrlp_funky_syntax_highlight = 1
 
+map <C-b> :CtrlPBuffer<CR>
+map <C-f> :CtrlPFunky<CR>
+
 " mostrar siempre el número de linea
 set number 
 
@@ -170,9 +173,8 @@ let g:tagbar_show_linenumbers = 1
 " activamos neocompl...
 let g:neocomplcache_enable_at_startup = 1
 
-" resize current buffer by +/- 5 
-" nnoremap <A-l> :vertical resize -5<cr>
-" nnoremap <A-h> :vertical resize +5<cr>
-" nnoremap <A-k> :resize -5<cr>
-" nnoremap <A-j> :resize +5<cr>
-
+" Undo
+set undofile                " Save undo's after file closes
+set undodir=$HOME/.vimundo/ " where to save undo histories
+set undolevels=1000         " How many undos
+set undoreload=10000        " number of lines to save for undo
