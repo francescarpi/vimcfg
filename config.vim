@@ -1,6 +1,9 @@
 " Auto carga de plugins
 call pathogen#infect('~/.vimcfg/plugins/{}')
 
+" Definimos tecla leader
+let mapleader=','
+
 " Vim-Airline (Barra de estado molona)
 set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
@@ -63,12 +66,6 @@ let g:gruvbox_italic=0
 colorscheme gruvbox
 set background=dark
 
-" plugin: taglist (permite ver métodos y atributos de clases, etc)
-let Tlist_Show_One_File = 1
-let Tlist_WinWidth = 50
-let Tlist_Use_SingleClick = 1
-let Tlist_Sort_Type = "name"
-
 " ampliamos número de linea de históricoa
 set history=700
 
@@ -116,8 +113,8 @@ hi MatchParen cterm=bold ctermbg=none ctermfg=yellow
 set title
 
 " asignamos al F2 la función de cambiar entre modo paste
-set pastetoggle=<F2>
-
+set pastetoggle=<leader>p
+ 
 " emmet
 let g:user_emmet_leader_key='<C-x>'
 
@@ -133,9 +130,6 @@ if has("gui_running")
         set guioptions-=T
 endif
 
-" cambiamos tecla de leader
-let mapleader=","
-
 " configuración search
 set incsearch
 " set hlsearch
@@ -143,8 +137,6 @@ set incsearch
 " mejoras para tabs
 nnoremap <C-h> :tabprevious<CR>
 nnoremap <C-l> :tabnext<CR>
-" nnoremap <C-h> :bnext<CR>
-" nnoremap <C-l> :bprevious<CR>
 
 " shell
 set shell=bash
@@ -170,26 +162,9 @@ nmap <F8> :TagbarToggle<CR>
 let g:tagbar_autofocus = 1
 let g:tagbar_show_linenumbers = 1
 
-" activamos neocompl...
-" let g:neocomplcache_enable_at_startup = 1
-let g:neocomplcache_enable_at_startup = 1
-let g:neocomplcache_enable_ignore_case = 1
-let g:neocomplcache_enable_smart_case = 1
-let g:neocomplcache_enable_auto_select = 1
-let g:neocomplcache_enable_fuzzy_completion = 1
-let g:neocomplcache_enable_camel_case_completion = 1
-let g:neocomplcache_enable_underbar_completion = 1
-let g:neocomplcache_fuzzy_completion_start_length = 1
-let g:neocomplcache_auto_completion_start_length = 1
-let g:neocomplcache_manual_completion_start_length = 1
-let g:neocomplcache_min_keyword_length = 1
-let g:neocomplcache_min_syntax_length = 1
-" complete with workds from any opened file
-let g:neocomplcache_same_filetype_lists = {}
-let g:neocomplcache_same_filetype_lists._ = '_'
-
 " Undo
 set undofile                " Save undo's after file closes
 set undodir=$HOME/.vimundo/ " where to save undo histories
 set undolevels=1000         " How many undos
 set undoreload=10000        " number of lines to save for undo
+
