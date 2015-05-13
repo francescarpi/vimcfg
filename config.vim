@@ -1,9 +1,6 @@
 " Auto carga de plugins
 call pathogen#infect('~/.vimcfg/plugins/{}')
 
-" Definimos tecla leader
-let mapleader=','
-
 " Vim-Airline (Barra de estado molona)
 set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
@@ -11,8 +8,8 @@ let g:airline#extensions#tabline#tab_nr_type = 1
 let g:airline#extensions#tabline#show_tab_nr = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline_theme='sol'
-" let g:airline_powerline_fonts = 1
-" let g:airline_detect_whitespace=0
+let g:airline_powerline_fonts = 1
+
 
 " CtrlP (abre ficheros en todas partes)
 let g:ctrlp_working_path_mode = 'a'
@@ -25,9 +22,12 @@ let g:ctrlp_custom_ignore = {
 let g:ctrlp_extensions = ['funky']
 let g:ctrlp_funky_matchtype = 'path'
 let g:ctrlp_funky_syntax_highlight = 1
-
 map <C-b> :CtrlPBuffer<CR>
 map <C-f> :CtrlPFunky<CR>
+if has('python')
+    let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
+endif
+
 
 " mostrar siempre el número de linea
 set number 
@@ -56,6 +56,29 @@ autocmd Filetype sh setlocal ts=4 sts=4 sw=4
 autocmd Filetype c setlocal ts=4 sts=4 sw=4
 autocmd Filetype yaml setlocal ts=4 sts=4 sw=4
 autocmd Filetype arduino setlocal ts=4 sts=4 sw=4
+autocmd Filetype typescript setlocal ts=4 sts=4 sw=4
+autocmd Filetype vim setlocal ts=4 sts=4 sw=4
+autocmd Filetype text setlocal ts=4 sts=4 sw=4
+
+" parche para mantener el filetype al recargar buffer
+" Al arrancar vim, definir: let g:tsp=1.
+" Todos los js que se abran, seran del tipo typescript
+let g:tsp = 0
+fun! PreserveJsFt()
+    if g:tsp == 1 " TypeScript Project...
+        setfiletype typescript
+    endif
+endfun
+autocmd BufNewFile,BufRead *.js call PreserveJsFt()
+
+" Preservar fyletype para htmldjango
+let g:djp = 0
+fun! PreserveHtmlFt()
+    if g:djp == 1
+        setfiletype htmldjango
+    endif
+endfun
+autocmd BufNewFile,BufRead *.html call PreserveHtmlFt()
 
 " usar espacios para los tabs
 set expandtab
@@ -113,14 +136,14 @@ hi MatchParen cterm=bold ctermbg=none ctermfg=yellow
 set title
 
 " asignamos al F2 la función de cambiar entre modo paste
-set pastetoggle=<leader>p
+set pastetoggle=<F2>
  
 " emmet
 let g:user_emmet_leader_key='<C-x>'
 
 " configuraciones para el modo gui
 if has("gui_running")
-        set guifont=Source\ Code\ Pro\ Light\ 13
+        set guifont=Source\ Code\ Pro\ 13
         set guioptions-=r
         set guioptions-=R
         set guioptions-=l
@@ -168,3 +191,9 @@ set undodir=$HOME/.vimundo/ " where to save undo histories
 set undolevels=1000         " How many undos
 set undoreload=10000        " number of lines to save for undo
 
+" Desactivamos timeout de la tecla leader
+set ttimeout
+set ttimeoutlen=0
+
+" Para no cortar las lineas
+set nowrap

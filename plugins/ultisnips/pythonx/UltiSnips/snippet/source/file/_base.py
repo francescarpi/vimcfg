@@ -11,19 +11,25 @@ from UltiSnips import _vim
 from UltiSnips import compatibility
 from UltiSnips.snippet.source._base import SnippetSource
 
+
 def _hash_file(path):
-    """Returns a hashdigest of 'path'"""
+    """Returns a hashdigest of 'path'."""
     if not os.path.isfile(path):
         return False
-    return hashlib.sha1(open(path, "rb").read()).hexdigest()
+    return hashlib.sha1(open(path, 'rb').read()).hexdigest()
+
 
 class SnippetSyntaxError(RuntimeError):
+
     """Thrown when a syntax error is found in a file."""
+
     def __init__(self, filename, line_index, msg):
-        RuntimeError.__init__(self, "%s in %s:%d" % (
+        RuntimeError.__init__(self, '%s in %s:%d' % (
             msg, filename, line_index))
 
+
 class SnippetFileSource(SnippetSource):
+
     """Base class that abstracts away 'extends' info and file hashes."""
 
     def __init__(self):
@@ -63,8 +69,12 @@ class SnippetFileSource(SnippetSource):
         if ft in self._snippets:
             del self._snippets[ft]
             del self._extends[ft]
-        for fn in self._files_for_ft[ft]:
-            self._parse_snippets(ft, fn)
+        try:
+            for fn in self._files_for_ft[ft]:
+                self._parse_snippets(ft, fn)
+        except:
+            del self._files_for_ft[ft]
+            raise
         # Now load for the parents
         for parent_ft in self.get_deep_extends([ft]):
             if parent_ft != ft and self._needs_update(parent_ft):
@@ -74,23 +84,23 @@ class SnippetFileSource(SnippetSource):
         """Parse the 'filename' for the given 'ft' and watch it for changes in
         the future."""
         self._file_hashes[filename] = _hash_file(filename)
-        file_data = compatibility.open_ascii_file(filename, "r").read()
+        file_data = compatibility.open_ascii_file(filename, 'r').read()
         for event, data in self._parse_snippet_file(file_data, filename):
-            if event == "error":
+            if event == 'error':
                 msg, line_index = data
                 filename = _vim.eval("""fnamemodify(%s, ":~:.")""" %
-                        _vim.escape(filename))
+                                     _vim.escape(filename))
                 raise SnippetSyntaxError(filename, line_index, msg)
-            elif event == "clearsnippets":
+            elif event == 'clearsnippets':
                 priority, triggers = data
                 self._snippets[ft].clear_snippets(priority, triggers)
-            elif event == "extends":
+            elif event == 'extends':
                 # TODO(sirver): extends information is more global
                 # than one snippet source.
                 filetypes, = data
                 self.update_extends(ft, filetypes)
-            elif event == "snippet":
+            elif event == 'snippet':
                 snippet, = data
                 self._snippets[ft].add_snippet(snippet)
             else:
-                assert False, "Unhandled %s: %r" % (event, data)
+                assert False, 'Unhandled %s: %r' % (event, data)
