@@ -1,29 +1,33 @@
 extends html
 
-snippet load
+snippet load "load" w
 {% load ${1} %}
 endsnippet
 
-snippet trans
+snippet trans "trans" w
 {% trans '${1}' %}
 endsnippet
 
-snippet inc
+snippet inc "include" w
 {% include '${1}' %}
 endsnippet
 
-snippet for
+snippet for "for" w
 {% for ${1} in ${2} %}
     ${3}
 {% endfor %}
 endsnippet
 
-snippet block
+snippet block "block" w
 {% block ${1} %}
     ${2}
 {% endblock $1 %}
 endsnippet
 
-snippet ext
+snippet ext "extends" w
 {% extends '${1}' %}
+endsnippet
+
+snippet url "url" w
+{% url '${1}' ${2}%}
 endsnippet

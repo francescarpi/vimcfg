@@ -24,10 +24,6 @@ let g:ctrlp_funky_matchtype = 'path'
 let g:ctrlp_funky_syntax_highlight = 1
 map <C-b> :CtrlPBuffer<CR>
 map <C-f> :CtrlPFunky<CR>
-if has('python')
-    let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
-endif
-
 
 " mostrar siempre el número de linea
 set number 
@@ -46,10 +42,10 @@ set cursorline
 
 " configuración de tabulación
 autocmd Filetype html setlocal ts=2 sts=2 sw=2
+autocmd Filetype htmldjango setlocal ts=2 sts=2 sw=2
 autocmd Filetype javascript setlocal ts=4 sts=4 sw=4
 autocmd Filetype css setlocal ts=4 sts=4 sw=4
 autocmd Filetype scss setlocal ts=4 sts=4 sw=4
-autocmd Filetype htmldjango setlocal ts=2 sts=2 sw=2
 autocmd Filetype less setlocal ts=4 sts=4 sw=4
 autocmd Filetype python setlocal ts=4 sts=4 sw=4
 autocmd Filetype sh setlocal ts=4 sts=4 sw=4
@@ -172,6 +168,7 @@ set backspace=2
 
 " netrw
 let g:netrw_list_hide= '.*\.pyc$'
+set wildmode=longest,list,full
 
 " activamos matchit
 set nocompatible

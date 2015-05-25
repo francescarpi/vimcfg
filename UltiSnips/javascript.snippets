@@ -5,3 +5,27 @@ endsnippet
 snippet dbg
 debugger;
 endsnippet
+
+snippet ngdoc "Angular doc" w
+/**
+ * @ngdoc function
+ * @name ${1}
+ * @description
+ * ${2}
+ */
+${3}
+endsnippet
+
+snippet ngdirec "Directiva de angular" w
+${1}.directive('${2}', function() {
+    return {
+        restrict: '${3}',
+        scope: {
+        },
+        templateUrl: '${4}',
+        link: function(scope) {
+	    ${5}
+        }
+    };
+});
+endsnippet
