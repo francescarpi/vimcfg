@@ -43,6 +43,7 @@ set cursorline
 
 " configuración de tabulación
 set softtabstop=4
+set expandtab
 autocmd Filetype html setlocal ts=2 sts=2 sw=2
 autocmd Filetype htmldjango setlocal ts=2 sts=2 sw=2
 
@@ -68,17 +69,11 @@ fun! PreserveHtmlFt()
 endfun
 autocmd BufNewFile,BufRead *.html call PreserveHtmlFt()
 
-" usar espacios para los tabs
-set expandtab
-
 " esquema de colores
 let g:gruvbox_termcolors = 256
 let g:gruvbox_italic=0
 colorscheme gruvbox
 set background=dark
-
-" ampliamos número de linea de históricoa
-set history=700
 
 " recargar un fichero cuando cambia
 set autoread
@@ -126,18 +121,6 @@ set pastetoggle=<F2>
 " emmet
 let g:user_emmet_leader_key='<C-x>'
 
-" configuraciones para el modo gui
-if has("gui_running")
-        set guifont=Source\ Code\ Pro\ 13
-        set guioptions-=r
-        set guioptions-=R
-        set guioptions-=l
-        set guioptions-=L
-        set guioptions-=b
-        set guioptions=m
-        set guioptions-=T
-endif
-
 " configuración search
 set incsearch
 set hlsearch
@@ -164,10 +147,9 @@ runtime macros/matchit.vim
 set tags=tags
 
 " Undo
-set undofile                " Save undo's after file closes
-set undodir=$HOME/.vimundo/ " where to save undo histories
-set undolevels=1000         " How many undos
-set undoreload=10000        " number of lines to save for undo
+set undofile
+set history=700
+set undodir=$HOME/.vimundo
 nnoremap <F4> :UndotreeToggle<cr>
 
 " Desactivamos timeout de la tecla leader
