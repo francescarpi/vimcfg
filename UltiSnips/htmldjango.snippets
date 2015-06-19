@@ -14,13 +14,13 @@ endsnippet
 
 snippet for "for" w
 {% for ${1} in ${2} %}
-    ${3}
+  ${3}
 {% endfor %}
 endsnippet
 
 snippet block "block" w
 {% block ${1} %}
-    ${2}
+  ${2}
 {% endblock $1 %}
 endsnippet
 
@@ -30,4 +30,16 @@ endsnippet
 
 snippet url "url" w
 {% url '${1}' ${2}%}
+endsnippet
+
+snippet if "if" w
+{% if ${1} %}
+  ${2}
+{% endif %}
+endsnippet
+
+snippet ifequal "ifequal" w
+{% ifequal ${1} %}
+  ${2}
+{% endifequal %}
 endsnippet

@@ -24,6 +24,7 @@ let g:ctrlp_funky_matchtype = 'path'
 let g:ctrlp_funky_syntax_highlight = 1
 map <C-b> :CtrlPBuffer<CR>
 map <C-f> :CtrlPFunky<CR>
+map <C-t> :CtrlPTag<CR>
 
 " mostrar siempre el número de linea
 set number 
@@ -41,20 +42,11 @@ set colorcolumn=80
 set cursorline
 
 " configuración de tabulación
+set softtabstop=4
 autocmd Filetype html setlocal ts=2 sts=2 sw=2
 autocmd Filetype htmldjango setlocal ts=2 sts=2 sw=2
-autocmd Filetype javascript setlocal ts=4 sts=4 sw=4
-autocmd Filetype css setlocal ts=4 sts=4 sw=4
-autocmd Filetype scss setlocal ts=4 sts=4 sw=4
-autocmd Filetype less setlocal ts=4 sts=4 sw=4
-autocmd Filetype python setlocal ts=4 sts=4 sw=4
-autocmd Filetype sh setlocal ts=4 sts=4 sw=4
-autocmd Filetype c setlocal ts=4 sts=4 sw=4
-autocmd Filetype yaml setlocal ts=4 sts=4 sw=4
-autocmd Filetype arduino setlocal ts=4 sts=4 sw=4
-autocmd Filetype typescript setlocal ts=4 sts=4 sw=4
-autocmd Filetype vim setlocal ts=4 sts=4 sw=4
-autocmd Filetype text setlocal ts=4 sts=4 sw=4
+
+au BufRead,BufNewFile *.zsh,*.zsh-theme setfiletype zsh
 
 " parche para mantener el filetype al recargar buffer
 " Al arrancar vim, definir: let g:tsp=1.
@@ -80,7 +72,7 @@ autocmd BufNewFile,BufRead *.html call PreserveHtmlFt()
 set expandtab
 
 " esquema de colores
-let g:gruvbox_termcolors = 16
+let g:gruvbox_termcolors = 256
 let g:gruvbox_italic=0
 colorscheme gruvbox
 set background=dark
@@ -125,9 +117,6 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 let python_highlight_all = 1
 let python_version_2 = 1
 
-" colors
-hi MatchParen cterm=bold ctermbg=none ctermfg=yellow
-
 " modificar el título del terminal
 set title
 
@@ -151,14 +140,11 @@ endif
 
 " configuración search
 set incsearch
-" set hlsearch
-
-" mejoras para tabs
-nnoremap <C-h> :tabprevious<CR>
-nnoremap <C-l> :tabnext<CR>
+set hlsearch
+nnoremap <silent> <F3> :nohlsearch<Bar>:echo<CR>
 
 " shell
-set shell=bash
+set shell=zsh
 
 " activamos syntax
 syntax on
@@ -177,16 +163,12 @@ runtime macros/matchit.vim
 " cargamos fichero de tags
 set tags=tags
 
-" Tagbar
-nmap <F8> :TagbarToggle<CR> 
-let g:tagbar_autofocus = 1
-let g:tagbar_show_linenumbers = 1
-
 " Undo
 set undofile                " Save undo's after file closes
 set undodir=$HOME/.vimundo/ " where to save undo histories
 set undolevels=1000         " How many undos
 set undoreload=10000        " number of lines to save for undo
+nnoremap <F4> :UndotreeToggle<cr>
 
 " Desactivamos timeout de la tecla leader
 set ttimeout
@@ -194,3 +176,7 @@ set ttimeoutlen=0
 
 " Para no cortar las lineas
 set nowrap
+
+" Comandos para Tidy
+command Thtml :%!tidy -q -i -w 0 --show-errors 0
+
