@@ -42,7 +42,7 @@ set colorcolumn=80
 set cursorline
 
 " configuración de tabulación
-set softtabstop=4
+set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
 set expandtab
 autocmd Filetype html setlocal ts=2 sts=2 sw=2
 autocmd Filetype htmldjango setlocal ts=2 sts=2 sw=2
