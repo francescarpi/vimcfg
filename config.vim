@@ -123,7 +123,7 @@ let g:user_emmet_leader_key='<C-x>'
 
 " configuración search
 set incsearch
-set hlsearch
+" set hlsearch
 nnoremap <silent> <F3> :nohlsearch<Bar>:echo<CR>
 
 " shell
@@ -161,4 +161,5 @@ set nowrap
 
 " Comandos para Tidy
 command Thtml :%!tidy -q -i -w 0 --show-errors 0
+command Tjson %!python -m json.tool
 

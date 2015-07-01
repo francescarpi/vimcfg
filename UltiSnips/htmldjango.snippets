@@ -5,11 +5,11 @@ snippet load "load" w
 endsnippet
 
 snippet trans "trans" w
-{% trans '${1}' %}
+{% trans "${1}" %}
 endsnippet
 
 snippet inc "include" w
-{% include '${1}' %}
+{% include "${1}" %}
 endsnippet
 
 snippet for "for" w
@@ -25,11 +25,11 @@ snippet block "block" w
 endsnippet
 
 snippet ext "extends" w
-{% extends '${1}' %}
+{% extends "${1}" %}
 endsnippet
 
 snippet url "url" w
-{% url '${1}' ${2}%}
+{% url "${1}" ${2}%}
 endsnippet
 
 snippet if "if" w
@@ -42,4 +42,10 @@ snippet ifequal "ifequal" w
 {% ifequal ${1} %}
   ${2}
 {% endifequal %}
+endsnippet
+
+snippet ifnotequal "ifnotequal" w
+{% ifnotequal ${1} %}
+  ${2}
+{% endifnotequal %}
 endsnippet
