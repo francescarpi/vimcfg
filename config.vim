@@ -49,17 +49,6 @@ autocmd Filetype htmldjango setlocal ts=2 sts=2 sw=2
 
 au BufRead,BufNewFile *.zsh,*.zsh-theme setfiletype zsh
 
-" parche para mantener el filetype al recargar buffer
-" Al arrancar vim, definir: let g:tsp=1.
-" Todos los js que se abran, seran del tipo typescript
-let g:tsp = 0
-fun! PreserveJsFt()
-    if g:tsp == 1 " TypeScript Project...
-        setfiletype typescript
-    endif
-endfun
-autocmd BufNewFile,BufRead *.js call PreserveJsFt()
-
 " Preservar fyletype para htmldjango
 let g:djp = 0
 fun! PreserveHtmlFt()
@@ -157,9 +146,8 @@ set ttimeout
 set ttimeoutlen=0
 
 " Para no cortar las lineas
-set nowrap
+" set nowrap
 
-" Comandos para Tidy
-command Thtml :%!tidy -q -i -w 0 --show-errors 0
-command Tjson %!python -m json.tool
-
+" Typescript
+let g:typescript_compiler_options = '-t ES5 --module commonjs --experimentalDecorators'
+let g:syntastic_typescript_tsc_args = "--my --args --here"
