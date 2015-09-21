@@ -59,10 +59,10 @@ endfun
 autocmd BufNewFile,BufRead *.html call PreserveHtmlFt()
 
 " esquema de colores
-let g:gruvbox_termcolors = 256
-let g:gruvbox_italic=0
-colorscheme gruvbox
 set background=dark
+colorscheme gruvbox
+let g:gruvbox_termcolors = 256
+let g:gruvbox_contrast_dark='hard'
 
 " recargar un fichero cuando cambia
 set autoread
@@ -120,6 +120,7 @@ set shell=zsh
 
 " activamos syntax
 syntax on
+syntax enable
 
 " make backspace work like most other apps
 set backspace=2 
@@ -151,3 +152,17 @@ set ttimeoutlen=0
 " Typescript
 let g:typescript_compiler_options = '-t ES5 --module commonjs --experimentalDecorators'
 let g:syntastic_typescript_tsc_args = "--my --args --here"
+
+" Syntastic
+let g:syntastic_html_checkers=['']
+let g:syntastic_less_checkers=['']
+let g:syntastic_css_checkers=['']
+
+" Easymotion
+map  / <Plug>(easymotion-sn)
+map <C-x> <Plug>(easymotion-prefix)
+let g:EasyMotion_startofline = 0
+
+" Teclas per anar al principi o final de la linea en modo insert
+inoremap <C-e> <C-o>$
+inoremap <C-a> <C-o>0
