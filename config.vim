@@ -166,3 +166,6 @@ let g:EasyMotion_startofline = 0
 " Teclas per anar al principi o final de la linea en modo insert
 inoremap <C-e> <C-o>$
 inoremap <C-a> <C-o>0
+
+" delimitmate mantingui indentació al return
+let delimitMate_expand_cr=1
