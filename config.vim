@@ -59,10 +59,13 @@ endfun
 autocmd BufNewFile,BufRead *.html call PreserveHtmlFt()
 
 " esquema de colores
+" set background=dark
+" colorscheme gruvbox
+" let g:gruvbox_termcolors = 256
+" let g:gruvbox_contrast_dark='hard'
 set background=dark
-colorscheme gruvbox
-let g:gruvbox_termcolors = 256
-let g:gruvbox_contrast_dark='hard'
+colorscheme base16-default
+let base16colorspace=256
 
 " recargar un fichero cuando cambia
 set autoread
@@ -169,3 +172,9 @@ inoremap <C-a> <C-o>0
 
 " delimitmate mantingui indentació al return
 let delimitMate_expand_cr=1
+
+" navigation
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
