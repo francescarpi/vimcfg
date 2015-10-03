@@ -46,6 +46,7 @@ set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
 set expandtab
 autocmd Filetype html setlocal ts=2 sts=2 sw=2
 autocmd Filetype htmldjango setlocal ts=2 sts=2 sw=2
+autocmd Filetype javascript.jsx setlocal ts=2 sts=2 sw=2
 
 au BufRead,BufNewFile *.zsh,*.zsh-theme setfiletype zsh
 
@@ -179,5 +180,3 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-" neerdtree
-map <F8> :NERDTreeToggle<CR>
