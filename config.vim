@@ -162,11 +162,6 @@ let g:syntastic_html_checkers=['']
 let g:syntastic_less_checkers=['']
 let g:syntastic_css_checkers=['']
 
-" Easymotion
-map  / <Plug>(easymotion-sn)
-map <C-x> <Plug>(easymotion-prefix)
-let g:EasyMotion_startofline = 0
-
 " Teclas per anar al principi o final de la linea en modo insert
 inoremap <C-e> <C-o>$
 inoremap <C-a> <C-o>0
