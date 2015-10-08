@@ -60,13 +60,10 @@ endfun
 autocmd BufNewFile,BufRead *.html call PreserveHtmlFt()
 
 " esquema de colores
-" set background=dark
-" colorscheme gruvbox
-" let g:gruvbox_termcolors = 256
-" let g:gruvbox_contrast_dark='hard'
 set background=dark
-colorscheme base16-default
-let base16colorspace=256
+colorscheme gruvbox
+let g:gruvbox_termcolors = 256
+let g:gruvbox_contrast_dark='soft'
 
 " recargar un fichero cuando cambia
 set autoread
