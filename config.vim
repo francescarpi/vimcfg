@@ -47,6 +47,7 @@ set expandtab
 autocmd Filetype html setlocal ts=2 sts=2 sw=2
 autocmd Filetype htmldjango setlocal ts=2 sts=2 sw=2
 autocmd Filetype javascript.jsx setlocal ts=2 sts=2 sw=2
+autocmd Filetype less setlocal ts=2 sts=2 sw=2
 
 au BufRead,BufNewFile *.zsh,*.zsh-theme setfiletype zsh
 
