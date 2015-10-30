@@ -7,16 +7,46 @@ snippet sbu
 
 endsnippet
 
+# Generic
 snippet ipdb
 import ipdb; ipdb.set_trace()
-endsnippet
-
-snippet pudb
-import pudb; pu.db
 endsnippet
 
 snippet cm "cm"
 """
 ${1}
 """${2}
+endsnippet
+
+# Model Types
+snippet mb "mb"
+${1} = models.BooleanField(_('${2}'), default=${3})${4}
+endsnippet
+
+snippet mc "mc"
+${1} = models.CharField(_('${2}'), max_length=${3}${4})${5}
+endsnippet
+
+snippet mt "mt"
+${1} = models.TextField(_('${2}'), max_length=${3}${4})${5}
+endsnippet
+
+snippet mi "mi"
+${1} = models.IntegerField(_('${2}'), default=${3})${4}
+endsnippet
+
+snippet mfl "mfl"
+${1} = models.FloatField(_('${2}'), default=${3})${4}
+endsnippet
+
+snippet mf "mf"
+${1} = models.ForeigkKey(${2}, verbose_name=_('${3}'))${4}
+endsnippet
+
+snippet mpi "mpi"
+${1} = models.PositiveSmallIntegerField(_('${2}'), default=${3})${4}
+endsnippet
+
+snippet mm2m "mm2m"
+${1} = models.ManyToManyField(${2}, verbose_name=_('${3}'))${4}
 endsnippet
