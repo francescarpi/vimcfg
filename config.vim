@@ -159,6 +159,8 @@ let g:syntastic_typescript_tsc_args = "--my --args --here"
 let g:syntastic_html_checkers=['']
 let g:syntastic_less_checkers=['']
 let g:syntastic_css_checkers=['']
+let g:syntastic_javascript_checkers = ['jsxhint']
+let g:syntastic_javascript_jsxhint_exec = 'jsx-jshint-wrapper'
 
 " Teclas per anar al principi o final de la linea en modo insert
 inoremap <C-e> <C-o>$
