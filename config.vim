@@ -115,7 +115,7 @@ let g:user_emmet_leader_key='<C-x>'
 " configuración search
 set incsearch
 " set hlsearch
-nnoremap <silent> <F3> :nohlsearch<Bar>:echo<CR>
+" nnoremap <silent> <F3> :nohlsearch<Bar>:echo<CR>
 
 " shell
 set shell=zsh
@@ -130,6 +130,7 @@ set backspace=2
 " netrw
 let g:netrw_list_hide= '.*\.pyc$'
 set wildmode=longest,list,full
+nnoremap <silent> <F3> :e %:h<CR>
 
 " activamos matchit
 set nocompatible
