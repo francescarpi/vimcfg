@@ -9,11 +9,15 @@ snippet comp "Component" w
  */
 import React from "react"
 
-export default class ${3} extends React.Component {
+class ${3} extends React.Component {
   render(){
     return (${4})
   }
 }
+$3.propTypes = {
+
+}
+export default $3
 endsnippet
 
 snippet sbu "Header comment" w
