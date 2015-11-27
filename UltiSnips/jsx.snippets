@@ -10,8 +10,10 @@ snippet comp "Component" w
 import React from "react"
 
 class ${3} extends React.Component {
-  render(){
-    return (${4})
+  render() {
+    return (
+	  <div>$3</div>
+	)
   }
 }
 $3.propTypes = {
@@ -27,4 +29,34 @@ snippet sbu "Header comment" w
  */
 
 ${3}
+endsnippet
+
+snippet cdu "Component did update" w
+componentDidUpdate(prevProps, prevState) {
+  ${1}
+}
+endsnippet
+
+snippet cwrp "Component will receive props" w
+componentWillReceiveProps(nextProps) {
+  ${1}
+}
+endsnippet
+
+snippet cwu "Component will update" w
+componentWillUpdate(nextProps, nextState) {
+  ${1}
+}
+endsnippet
+
+snippet cdm "Component did mount" w
+componentDidMount() {
+  ${1}
+}
+endsnippet
+
+snippet cwm "Component will mount" w
+componentWillMount() {
+  ${1}
+}
 endsnippet
