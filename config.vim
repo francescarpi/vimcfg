@@ -46,7 +46,6 @@ set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
 set expandtab
 autocmd Filetype html setlocal ts=2 sts=2 sw=2
 autocmd Filetype htmldjango setlocal ts=2 sts=2 sw=2
-autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
 autocmd Filetype javascript.jsx setlocal ts=2 sts=2 sw=2
 autocmd Filetype less setlocal ts=2 sts=2 sw=2
 
@@ -60,6 +59,17 @@ fun! PreserveHtmlFt()
     endif
 endfun
 autocmd BufNewFile,BufRead *.html call PreserveHtmlFt()
+
+" Preservar fyletype para javascript.jsx
+let g:rp = 0
+fun! PreserveJsxFt()
+    if g:rp == 1
+        setfiletype javascript.jsx
+    endif
+endfun
+autocmd BufNewFile,BufRead *.js call PreserveJsxFt()
+
+
 
 " esquema de colores
 set background=dark
