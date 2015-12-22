@@ -7,7 +7,7 @@ snippet comp "Component" w
  * Project: ${1}
  * Module: ${2}
  */
-import React from "react"
+import React, {PropTypes} from "react"
 
 class ${3} extends React.Component {
   render() {
@@ -69,6 +69,13 @@ endsnippet
 
 snippet cwun "Component will unmount" w
 componentWillUnmount() {
+  ${1}
+}
+endsnippet
+
+snippet cc "Constructor" w
+constructor(props) {
+  super(props)
   ${1}
 }
 endsnippet
