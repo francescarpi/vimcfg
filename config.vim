@@ -60,6 +60,17 @@ fun! PreserveHtmlFt()
 endfun
 autocmd BufNewFile,BufRead *.html call PreserveHtmlFt()
 
+" Preservar fyletype para javascript.jsx
+let g:rp = 0
+fun! PreserveJsxFt()
+    if g:rp == 1
+        setfiletype javascript.jsx
+    endif
+endfun
+autocmd BufNewFile,BufRead *.js call PreserveJsxFt()
+
+
+
 " esquema de colores
 set background=dark
 colorscheme gruvbox
