@@ -1,16 +1,6 @@
 " Auto carga de plugins
 call pathogen#infect('~/.vimcfg/plugins/{}')
 
-" Vim-Airline (Barra de estado molona)
-set laststatus=2
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#tab_nr_type = 1
-let g:airline#extensions#tabline#show_tab_nr = 1
-let g:airline#extensions#tabline#fnamemod = ':t'
-let g:airline_theme='sol'
-let g:airline_powerline_fonts = 1
-
-
 " CtrlP (abre ficheros en todas partes)
 let g:ctrlp_working_path_mode = 'a'
 let g:ctrlp_max_height = 20
