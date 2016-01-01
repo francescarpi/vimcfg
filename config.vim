@@ -1,6 +1,9 @@
 " Auto carga de plugins
 call pathogen#infect('~/.vimcfg/plugins/{}')
 
+" Airline
+let g:airline_powerline_fonts = 1
+
 " CtrlP (abre ficheros en todas partes)
 let g:ctrlp_working_path_mode = 'a'
 let g:ctrlp_max_height = 20
