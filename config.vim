@@ -62,13 +62,11 @@ fun! PreserveJsxFt()
 endfun
 autocmd BufNewFile,BufRead *.js call PreserveJsxFt()
 
-
-
 " esquema de colores
 set background=dark
 colorscheme gruvbox
 let g:gruvbox_termcolors = 256
-let g:gruvbox_contrast_dark='soft'
+let g:gruvbox_contrast_dark='hard'
 
 " recargar un fichero cuando cambia
 set autoread
@@ -119,7 +117,7 @@ let g:user_emmet_leader_key='<C-x>'
 " configuración search
 set incsearch
 " set hlsearch
-" nnoremap <silent> <F3> :nohlsearch<Bar>:echo<CR>
+nnoremap <silent> <F5> :nohlsearch<Bar>:echo<CR>
 
 " shell
 set shell=zsh
@@ -153,9 +151,6 @@ nnoremap <F4> :UndotreeToggle<cr>
 set ttimeout
 set ttimeoutlen=0
 
-" Para no cortar las lineas
-" set nowrap
-
 " Typescript
 let g:typescript_compiler_options = '-t ES5 --module commonjs --experimentalDecorators'
 let g:syntastic_typescript_tsc_args = "--my --args --here"
@@ -165,8 +160,6 @@ let g:syntastic_html_checkers=['']
 let g:syntastic_less_checkers=['']
 let g:syntastic_css_checkers=['']
 let g:syntastic_javascript_checkers = ['eslint']
-" let g:syntastic_javascript_checkers = ['eslint', 'jsxhint']
-" let g:syntastic_javascript_jsxhint_exec = 'jsx-jshint-wrapper'
 
 " Teclas per anar al principi o final de la linea en modo insert
 inoremap <C-e> <C-o>$
