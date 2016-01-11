@@ -154,15 +154,12 @@ nnoremap <F4> :UndotreeToggle<cr>
 set ttimeout
 set ttimeoutlen=0
 
-" Typescript
-let g:typescript_compiler_options = '-t ES5 --module commonjs --experimentalDecorators'
-let g:syntastic_typescript_tsc_args = "--my --args --here"
-
 " Syntastic
 let g:syntastic_html_checkers=['']
 let g:syntastic_less_checkers=['']
 let g:syntastic_css_checkers=['']
-let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_checkers=['']
+" let g:syntastic_javascript_checkers = ['eslint']
 
 " Teclas per anar al principi o final de la linea en modo insert
 inoremap <C-e> <C-o>$

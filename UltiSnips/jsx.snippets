@@ -5,14 +5,15 @@ endsnippet
 snippet comp "Component" w
 /*
  * Project: ${1}
- * Module: `!p snip.rv = path`
+ * Module: ${4}`!p snip.rv = path`
  */
 import React from "react"
 
 class ${3} extends React.Component {
+
   render() {
     return (
-	  <div>$3</div>
+	  ${5}<div>$3</div>
 	)
   }
 }
