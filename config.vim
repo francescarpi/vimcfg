@@ -69,7 +69,7 @@ autocmd BufNewFile,BufRead *.js call PreserveJsxFt()
 set background=dark
 colorscheme gruvbox
 let g:gruvbox_termcolors = 256
-let g:gruvbox_contrast_dark='hard'
+let g:gruvbox_contrast_dark='soft' " hard, medium, soft
 
 " recargar un fichero cuando cambia
 set autoread
