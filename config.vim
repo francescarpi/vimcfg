@@ -5,7 +5,7 @@ call pathogen#infect('~/.vimcfg/plugins/{}')
 let g:airline_powerline_fonts = 1
 " let g:airline_theme='bubblegum'
 " let g:airline_theme='luna'
-let g:airline_theme='tomorrow'
+let g:airline_theme='sol'
 
 " CtrlP (abre ficheros en todas partes)
 let g:ctrlp_working_path_mode = 'a'
