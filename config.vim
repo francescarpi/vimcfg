@@ -153,6 +153,7 @@ nnoremap <F4> :UndotreeToggle<cr>
 " Desactivamos timeout de la tecla leader
 set ttimeout
 set ttimeoutlen=0
+let mapleader=","
 
 " Syntastic
 let g:syntastic_html_checkers=['']
