@@ -16,7 +16,7 @@ let g:ctrlp_custom_ignore = {
   \ 'link': 'some_bad_symbolic_links',
   \ }
 let g:ctrlp_extensions = ['funky']
-let g:ctrlp_funky_matchtype = 'path'
+let g:ctrlp_funky_matchtype = 'line'
 let g:ctrlp_funky_syntax_highlight = 1
 map <C-b> :CtrlPBuffer<CR>
 map <C-f> :CtrlPFunky<CR>
