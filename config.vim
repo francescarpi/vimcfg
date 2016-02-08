@@ -177,3 +177,6 @@ nnoremap <C-H> <C-W><C-H>
 
 " remove horizontal cursor line
 set cul!
+
+" show slashes in json files
+set conceallevel=0
