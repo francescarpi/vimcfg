@@ -3,8 +3,6 @@ call pathogen#infect('~/.vimcfg/plugins/{}')
 
 " Airline
 let g:airline_powerline_fonts = 1
-" let g:airline_theme='bubblegum'
-" let g:airline_theme='luna'
 let g:airline_theme='sol'
 
 " CtrlP (abre ficheros en todas partes)
@@ -65,6 +63,10 @@ fun! PreserveJsxFt()
 endfun
 autocmd BufNewFile,BufRead *.js call PreserveJsxFt()
 
+" activamos syntax
+syntax on
+syntax enable
+
 " esquema de colores
 set background=dark
 colorscheme gruvbox
@@ -124,10 +126,6 @@ nnoremap <silent> <F5> :nohlsearch<Bar>:echo<CR>
 
 " shell
 set shell=zsh
-
-" activamos syntax
-syntax on
-syntax enable
 
 " make backspace work like most other apps
 set backspace=2 
