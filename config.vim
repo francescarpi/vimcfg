@@ -175,3 +175,6 @@ set cul!
 
 " show slashes in json files
 set conceallevel=0
+
+" shortcut for escape...
+imap jj <Esc>
