@@ -68,13 +68,14 @@ syntax on
 syntax enable
 
 " esquema de colores
-" set background=dark
-" colorscheme gruvbox
-" let g:gruvbox_termcolors = 256
-" let g:gruvbox_contrast_dark='medium' " hard, medium, soft
-colorscheme molokai
-let g:rehash256 = 1
-let g:molokai_original = 1
+set background=dark
+colorscheme gruvbox
+let g:gruvbox_termcolors = 256
+let g:gruvbox_contrast_dark='hard' " hard, medium, soft
+
+" colorscheme molokai
+" let g:rehash256 = 1
+" let g:molokai_original = 1
 
 " recargar un fichero cuando cambia
 set autoread
