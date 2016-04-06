@@ -1,5 +1,10 @@
-" Auto carga de plugins
-call pathogen#infect('~/.vimcfg/plugins/{}')
+" Set Vundle
+set rtp+=~/.vimcfg/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+
+" Plugins list
+Plugin 'https://github.com/morhetz/gruvbox.git'
 
 " Airline
 let g:airline_powerline_fonts = 1
