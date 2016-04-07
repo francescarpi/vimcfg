@@ -27,7 +27,7 @@ call vundle#end()
 
 " Airline
 let g:airline_powerline_fonts = 1
-let g:airline_theme='sol'
+" let g:airline_theme='sol'
 
 " CtrlP (abre ficheros en todas partes)
 let g:ctrlp_working_path_mode = 'a'
@@ -97,9 +97,6 @@ colorscheme gruvbox
 let g:gruvbox_termcolors = 256
 let g:gruvbox_contrast_dark='hard' " hard, medium, soft
 
-" colorscheme molokai
-" let g:rehash256 = 1
-" let g:molokai_original = 1
 
 " recargar un fichero cuando cambia
 set autoread
