@@ -15,6 +15,7 @@ Plugin 'https://github.com/tomtom/tcomment_vim.git'
 Plugin 'https://github.com/SirVer/ultisnips.git'
 Plugin 'https://github.com/mbbill/undotree.git'
 Plugin 'https://github.com/vim-airline/vim-airline.git'
+Plugin 'https://github.com/vim-airline/vim-airline-themes.git'
 Plugin 'https://github.com/Chiel92/vim-autoformat.git'
 Plugin 'https://github.com/easymotion/vim-easymotion.git'
 Plugin 'https://github.com/pangloss/vim-javascript.git'
@@ -27,7 +28,7 @@ call vundle#end()
 
 " Airline
 let g:airline_powerline_fonts = 1
-" let g:airline_theme='sol'
+let g:airline_theme='sol'
 
 " CtrlP (abre ficheros en todas partes)
 let g:ctrlp_working_path_mode = 'a'
