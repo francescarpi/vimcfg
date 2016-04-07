@@ -2,9 +2,28 @@
 set rtp+=~/.vimcfg/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
-
-" Plugins list
 Plugin 'https://github.com/morhetz/gruvbox.git'
+Plugin 'https://github.com/jiangmiao/auto-pairs.git'
+Plugin 'https://github.com/rbgrouleff/bclose.vim.git'
+Plugin 'https://github.com/kien/ctrlp.vim.git'
+Plugin 'https://github.com/tacahiroy/ctrlp-funky.git'
+Plugin 'https://github.com/mattn/emmet-vim.git'
+Plugin 'https://github.com/Yggdroot/indentLine.git'
+Plugin 'https://github.com/hdima/python-syntax.git'
+Plugin 'https://github.com/scrooloose/syntastic.git'
+Plugin 'https://github.com/tomtom/tcomment_vim.git'
+Plugin 'https://github.com/SirVer/ultisnips.git'
+Plugin 'https://github.com/mbbill/undotree.git'
+Plugin 'https://github.com/vim-airline/vim-airline.git'
+Plugin 'https://github.com/Chiel92/vim-autoformat.git'
+Plugin 'https://github.com/easymotion/vim-easymotion.git'
+Plugin 'https://github.com/pangloss/vim-javascript.git'
+Plugin 'https://github.com/mxw/vim-jsx.git'
+Plugin 'https://github.com/groenewege/vim-less.git'
+Plugin 'https://github.com/terryma/vim-multiple-cursors.git'
+Plugin 'https://github.com/tpope/vim-surround.git'
+Plugin 'https://github.com/plasticboy/vim-markdown.git'
+call vundle#end()
 
 " Airline
 let g:airline_powerline_fonts = 1
