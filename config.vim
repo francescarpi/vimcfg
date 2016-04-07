@@ -28,7 +28,7 @@ call vundle#end()
 
 " Airline
 let g:airline_powerline_fonts = 1
-let g:airline_theme='sol'
+let g:airline_theme='papercolor'
 
 " CtrlP (abre ficheros en todas partes)
 let g:ctrlp_working_path_mode = 'a'
