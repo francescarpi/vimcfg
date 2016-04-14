@@ -21,8 +21,8 @@ Plugin 'https://github.com/easymotion/vim-easymotion.git'
 Plugin 'https://github.com/pangloss/vim-javascript.git'
 Plugin 'https://github.com/mxw/vim-jsx.git'
 Plugin 'https://github.com/groenewege/vim-less.git'
+Plugin 'https://github.com/vitalk/vim-lesscss.git'
 Plugin 'https://github.com/terryma/vim-multiple-cursors.git'
-Plugin 'https://github.com/tpope/vim-surround.git'
 Plugin 'https://github.com/plasticboy/vim-markdown.git'
 call vundle#end()
 
