@@ -8,8 +8,8 @@ Plugin 'https://github.com/rbgrouleff/bclose.vim.git'
 Plugin 'https://github.com/kien/ctrlp.vim.git'
 Plugin 'https://github.com/tacahiroy/ctrlp-funky.git'
 Plugin 'https://github.com/mattn/emmet-vim.git'
-Plugin 'https://github.com/Yggdroot/indentLine.git'
 Plugin 'https://github.com/hdima/python-syntax.git'
+Plugin 'https://github.com/vim-scripts/indentpython.vim.git'
 Plugin 'https://github.com/scrooloose/syntastic.git'
 Plugin 'https://github.com/tomtom/tcomment_vim.git'
 Plugin 'https://github.com/SirVer/ultisnips.git'
@@ -17,7 +17,6 @@ Plugin 'https://github.com/mbbill/undotree.git'
 Plugin 'https://github.com/vim-airline/vim-airline.git'
 Plugin 'https://github.com/vim-airline/vim-airline-themes.git'
 Plugin 'https://github.com/Chiel92/vim-autoformat.git'
-Plugin 'https://github.com/easymotion/vim-easymotion.git'
 Plugin 'https://github.com/pangloss/vim-javascript.git'
 Plugin 'https://github.com/mxw/vim-jsx.git'
 Plugin 'https://github.com/groenewege/vim-less.git'
@@ -189,9 +188,6 @@ let g:syntastic_javascript_checkers=['']
 " Teclas per anar al principi o final de la linea en modo insert
 inoremap <C-e> <C-o>$
 inoremap <C-a> <C-o>0
-
-" delimitmate mantingui indentació al return
-let delimitMate_expand_cr=1
 
 " remove horizontal cursor line
 set cul!
