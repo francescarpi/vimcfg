@@ -23,6 +23,7 @@ Plugin 'groenewege/vim-less.git'
 Plugin 'vitalk/vim-lesscss.git'
 Plugin 'terryma/vim-multiple-cursors.git'
 Plugin 'plasticboy/vim-markdown.git'
+Plugin 'jeetsukumaran/vim-buffergator'
 call vundle#end()
 
 " Airline
@@ -197,3 +198,7 @@ set conceallevel=0
 
 " shortcut for escape...
 imap jj <Esc>
+
+" Buffergator
+
+nnoremap <F6> :BuffergatorToggle<cr>
