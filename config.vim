@@ -24,6 +24,7 @@ Plugin 'vitalk/vim-lesscss.git'
 Plugin 'terryma/vim-multiple-cursors.git'
 Plugin 'plasticboy/vim-markdown.git'
 Plugin 'jeetsukumaran/vim-buffergator'
+Plugin 'Yggdroot/indentLine.git'
 call vundle#end()
 
 " Airline
