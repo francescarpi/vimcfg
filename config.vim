@@ -201,6 +201,4 @@ set conceallevel=0
 imap jj <Esc>
 
 " Buffergator
-nnoremap <C-l> :BuffergatorToggle<cr>
-
 let g:buffergator_viewport_split_policy = "B"
