@@ -22,6 +22,7 @@ Plugin 'Yggdroot/indentLine.git'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plugin 'rking/ag.vim', { 'on': 'Ag' }
 
 " themes
 Plugin 'morhetz/gruvbox.git'
