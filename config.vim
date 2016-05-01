@@ -1,15 +1,15 @@
 " Set Vundle
 set rtp+=~/.vimcfg/bundle/Vundle.vim
+
 call vundle#begin()
+
+" common
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'morhetz/gruvbox.git'
 Plugin 'jiangmiao/auto-pairs.git'
-Plugin 'rbgrouleff/bclose.vim.git'
 Plugin 'kien/ctrlp.vim.git'
 Plugin 'tacahiroy/ctrlp-funky.git'
-Plugin 'mattn/emmet-vim.git'
-Plugin 'hdima/python-syntax.git'
-Plugin 'vim-scripts/indentpython.vim.git'
+Plugin 'rbgrouleff/bclose.vim.git'
+Plugin 'jeetsukumaran/vim-buffergator'
 Plugin 'scrooloose/syntastic.git'
 Plugin 'tomtom/tcomment_vim.git'
 Plugin 'SirVer/ultisnips.git'
@@ -17,14 +17,33 @@ Plugin 'mbbill/undotree.git'
 Plugin 'vim-airline/vim-airline.git'
 Plugin 'vim-airline/vim-airline-themes.git'
 Plugin 'Chiel92/vim-autoformat.git'
-Plugin 'pangloss/vim-javascript.git'
-Plugin 'mxw/vim-jsx.git'
-Plugin 'groenewege/vim-less.git'
-Plugin 'vitalk/vim-lesscss.git'
 Plugin 'terryma/vim-multiple-cursors.git'
-Plugin 'plasticboy/vim-markdown.git'
-Plugin 'jeetsukumaran/vim-buffergator'
 Plugin 'Yggdroot/indentLine.git'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+
+" themes
+Plugin 'morhetz/gruvbox.git'
+
+" html
+Plugin 'mattn/emmet-vim.git', { 'for': ['html', 'javascript'] }
+
+" python
+Plugin 'hdima/python-syntax.git', { 'for': 'python' }
+Plugin 'vim-scripts/indentpython.vim.git', { 'for': 'python' }
+
+" javascript
+Plugin 'pangloss/vim-javascript.git', { 'for': ['html', 'javascript'] }
+Plugin 'mxw/vim-jsx.git', { 'for': ['javascript.jsx', 'javascript'] }
+
+" css
+Plugin 'groenewege/vim-less.git', { 'for': ['less'] }
+Plugin 'vitalk/vim-lesscss.git', { 'for': ['less'] }
+
+" mardkdown
+Plugin 'plasticboy/vim-markdown.git', { 'for': ['markdown'] }
+
 call vundle#end()
 
 " Airline
@@ -98,7 +117,6 @@ set background=dark
 colorscheme gruvbox
 let g:gruvbox_termcolors = 256
 let g:gruvbox_contrast_dark='hard' " hard, medium, soft
-
 
 " recargar un fichero cuando cambia
 set autoread
@@ -205,3 +223,6 @@ let g:buffergator_viewport_split_policy = "B"
 
 " less to css
 let g:lesscss_on = 0
+
+"Open NERDTree with Ctrl-n
+map <F5> :NERDTreeToggle<CR>
