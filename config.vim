@@ -42,9 +42,9 @@ let g:ctrlp_custom_ignore = {
 let g:ctrlp_extensions = ['funky']
 let g:ctrlp_funky_matchtype = 'line'
 let g:ctrlp_funky_syntax_highlight = 1
-map <C-b> :CtrlPBuffer<CR>
 map <C-f> :CtrlPFunky<CR>
 map <C-t> :CtrlPTag<CR>
+map <C-b> :CtrlPBuffer<CR>
 
 " mostrar siempre el número de linea
 set number 
@@ -202,3 +202,6 @@ imap jj <Esc>
 
 " Buffergator
 let g:buffergator_viewport_split_policy = "B"
+
+" less to css
+let g:lesscss_on = 0
