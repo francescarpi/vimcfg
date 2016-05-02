@@ -70,12 +70,6 @@ map <C-b> :CtrlPBuffer<CR>
 " mostrar siempre el número de linea
 set number 
 
-" lineas de scroll cuando el cursor deja la pantalla
-set scrolljump=5 
-
-" mínimo lineas mantener debajo del cursor
-set scrolloff=3 
-
 " marca de columna límite
 set colorcolumn=80
 
