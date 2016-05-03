@@ -49,8 +49,10 @@ Plugin 'plasticboy/vim-markdown.git', { 'for': ['markdown'] }
 call vundle#end()
 
 " Airline
-let g:airline_powerline_fonts = 1
-let g:airline_theme='papercolor'
+let g:airline_powerline_fonts=1
+let g:airline_left_sep=''
+let g:airline_right_sep=''
+let g:airline_theme='bubblegum'
 
 " CtrlP (abre ficheros en todas partes)
 let g:ctrlp_working_path_mode = 'a'
