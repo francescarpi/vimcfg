@@ -229,3 +229,5 @@ let g:lesscss_on = 0
 
 "Open NERDTree with Ctrl-n
 map <F5> :NERDTreeToggle<CR>
+
+set hidden " current buffer can be put into background
