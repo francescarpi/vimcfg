@@ -6,7 +6,7 @@ call vundle#begin()
 " common
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'jiangmiao/auto-pairs.git'
-Plugin 'kien/ctrlp.vim.git'
+Plugin 'ctrlpvim/ctrlp.vim.git'
 Plugin 'tacahiroy/ctrlp-funky.git'
 Plugin 'rbgrouleff/bclose.vim.git'
 Plugin 'jeetsukumaran/vim-buffergator'
@@ -26,7 +26,12 @@ Plugin 'rking/ag.vim', { 'on': 'Ag' }
 Plugin 'tpope/vim-fugitive'
 
 " themes
-Plugin 'morhetz/gruvbox.git'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'morhetz/gruvbox'
+Plugin 'zenorocha/dracula-theme'
+Plugin 'ryanoasis/vim-devicons'
+Plugin 'sickill/vim-monokai'
 
 " html
 Plugin 'mattn/emmet-vim.git', { 'for': ['html', 'javascript'] }
