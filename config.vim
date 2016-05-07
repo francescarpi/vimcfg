@@ -29,7 +29,6 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'morhetz/gruvbox'
-Plugin 'zenorocha/dracula-theme'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'sickill/vim-monokai'
 
@@ -71,7 +70,6 @@ let g:ctrlp_extensions = ['funky']
 let g:ctrlp_funky_matchtype = 'line'
 let g:ctrlp_funky_syntax_highlight = 1
 map <C-f> :CtrlPFunky<CR>
-map <C-t> :CtrlPTag<CR>
 map <C-b> :CtrlPBuffer<CR>
 
 " mostrar siempre el número de linea
@@ -120,9 +118,6 @@ set background=dark
 colorscheme gruvbox
 let g:gruvbox_termcolors = 256
 let g:gruvbox_contrast_dark='hard' " hard, medium, soft
-
-" recargar un fichero cuando cambia
-set autoread
 
 " habilita la detección de tipo de fichero
 filetype on
@@ -211,12 +206,6 @@ let g:syntastic_javascript_checkers=['']
 " Teclas per anar al principi o final de la linea en modo insert
 inoremap <C-e> <C-o>$
 inoremap <C-a> <C-o>0
-
-" remove horizontal cursor line
-set cul!
-
-" show slashes in json files
-set conceallevel=0
 
 " shortcut for escape...
 imap jj <Esc>
