@@ -212,6 +212,7 @@ imap jj <Esc>
 
 " Buffergator
 let g:buffergator_viewport_split_policy = "B"
+let g:buffergator_sort_regime = "basename"
 
 " less to css
 let g:lesscss_on = 0
