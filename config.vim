@@ -5,7 +5,7 @@ call vundle#begin()
 
 " common
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'jiangmiao/auto-pairs.git'
+Plugin 'Raimondi/delimitMate.git'
 Plugin 'ctrlpvim/ctrlp.vim.git'
 Plugin 'tacahiroy/ctrlp-funky.git'
 Plugin 'rbgrouleff/bclose.vim.git'
@@ -184,3 +184,6 @@ let g:jsx_ext_required = 0
 inoremap <C-e> <C-o>$
 inoremap <C-a> <C-o>0
 imap jj <Esc>
+
+" delimitmate settings
+let delimitMate_expand_cr = 1
