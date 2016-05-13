@@ -1,4 +1,4 @@
-" Set Vundle
+" set vundle
 set rtp+=~/.vimcfg/bundle/Vundle.vim
 
 call vundle#begin()
@@ -24,6 +24,7 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plugin 'rking/ag.vim', { 'on': 'Ag' }
 Plugin 'tpope/vim-fugitive'
+Plugin 'editorconfig/editorconfig-vim'
 
 " themes
 Plugin 'altercation/vim-colors-solarized'
@@ -33,15 +34,21 @@ Plugin 'ryanoasis/vim-devicons'
 Plugin 'sickill/vim-monokai'
 
 " html
-Plugin 'mattn/emmet-vim.git', { 'for': ['html', 'javascript'] }
+Plugin 'gregsexton/MatchTag', { 'for': ['html', 'javascript'] }
+Plugin 'mattn/emmet-vim', { 'for': ['html', 'javascript'] }
+Plugin 'othree/html5.vim', { 'for': ['html', 'javascript'] }
+Plugin 'tpope/vim-haml', { 'for': 'haml'}
 
 " python
 Plugin 'hdima/python-syntax.git', { 'for': 'python' }
 Plugin 'vim-scripts/indentpython.vim.git', { 'for': 'python' }
 
 " javascript
+Plugin 'othree/yajs.vim', { 'for': 'javascript' }
+Plugin 'maksimr/vim-jsbeautify', { 'for': 'javascript' }
+Plugin 'wizicer/vim-jison', { 'for': 'jison' }
+Plugin 'mxw/vim-jsx', { 'for': 'javascript' }
 Plugin 'pangloss/vim-javascript.git', { 'for': ['html', 'javascript'] }
-Plugin 'mxw/vim-jsx.git', { 'for': ['javascript.jsx', 'javascript'] }
 
 " css
 Plugin 'groenewege/vim-less.git', { 'for': ['less'] }
@@ -52,13 +59,13 @@ Plugin 'plasticboy/vim-markdown.git', { 'for': ['markdown'] }
 
 call vundle#end()
 
-" Airline
+" airline settings
 let g:airline_powerline_fonts=1
 let g:airline_left_sep=''
 let g:airline_right_sep=''
 let g:airline_theme='bubblegum'
 
-" CtrlP (abre ficheros en todas partes)
+" ctrlp settings
 let g:ctrlp_working_path_mode = 'a'
 let g:ctrlp_max_height = 20
 let g:ctrlp_custom_ignore = {
@@ -72,153 +79,108 @@ let g:ctrlp_funky_syntax_highlight = 1
 map <C-f> :CtrlPFunky<CR>
 map <C-b> :CtrlPBuffer<CR>
 
-" mostrar siempre el número de linea
-set number 
+" general settings
+set number " show line number
+set colorcolumn=80 " show vertical line at column
+set cursorline " show horizontal line at cursor position
+set wildmenu " enhanced command line completion
+set encoding=utf8 " default encoding
+set mouse=a " mouse settings
+set title " show title in terminal window bar
+set pastetoggle=<F2> " key for pastetoggle
+set shell=zsh " default shell
+set backspace=indent,eol,start " make backspace behave in a sane manner
+set tags=tags " set tags files
+set nocompatible
+set hidden " current buffer can be put into background
 
-" marca de columna límite
-set colorcolumn=80
+" search settings
+set incsearch
+set nohlsearch
+set ignorecase
 
-" Resaltar linea donde está el curosr
-set cursorline
+" backups disabled
+set nobackup
+set nowb
+set noswapfile
 
-" configuración de tabulación
+" default tab settings
 set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
 set expandtab
-autocmd Filetype html setlocal ts=2 sts=2 sw=2
-autocmd Filetype htmldjango setlocal ts=2 sts=2 sw=2
-autocmd Filetype javascript.jsx setlocal ts=2 sts=2 sw=2
-autocmd Filetype less setlocal ts=2 sts=2 sw=2
+filetype plugin indent on
 
-au BufRead,BufNewFile *.zsh,*.zsh-theme setfiletype zsh
-
-" Preservar fyletype para htmldjango
-let g:djp = 0
-fun! PreserveHtmlFt()
-    if g:djp == 1
-        setfiletype htmldjango
-    endif
-endfun
-autocmd BufNewFile,BufRead *.html call PreserveHtmlFt()
-
-" Preservar fyletype para javascript.jsx
-let g:rp = 0
-fun! PreserveJsxFt()
-    if g:rp == 1
-        setfiletype javascript.jsx
-    endif
-endfun
-autocmd BufNewFile,BufRead *.js call PreserveJsxFt()
-
-" activamos syntax
+" theme settings
 syntax on
 syntax enable
-
-" esquema de colores
 set background=dark
 colorscheme gruvbox
 let g:gruvbox_termcolors = 256
 let g:gruvbox_contrast_dark='hard' " hard, medium, soft
 
-" habilita la detección de tipo de fichero
+" file type detection and plugin
 filetype on
-
-" habilita plugins específicos para tipos de ficheros
 filetype plugin on
 
-" manejo automático de sangría para python
-filetype plugin indent on
-
-" mejoras en autocompletado
-set wildmenu
-
-" ignora case cuando se busca
-set ignorecase
-
-" codificación por defecto
-set encoding=utf8
-
-" activación del uso del mouse en el terminal
-set mouse=a
-
-" desactivamos backups, swaps...
-set nobackup
-set nowb
-set noswapfile
-
-" plugin para snippets
+" ultisnips settings
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
+" python settings
 let python_highlight_all = 1
 let python_version_2 = 1
 
-" modificar el título del terminal
-set title
-
-" asignamos al F2 la función de cambiar entre modo paste
-set pastetoggle=<F2>
- 
-" emmet
+" emmet settings
 let g:user_emmet_leader_key='<C-x>'
 
-" configuración search
-set incsearch
-set nohlsearch
-nnoremap <silent> <F5> :nohlsearch<Bar>:echo<CR>
-
-" shell
-set shell=zsh
-
-" make backspace work like most other apps
-set backspace=2 
-
-" netrw
-let g:netrw_list_hide= '.*\.pyc$'
-set wildmode=longest,list,full
-nnoremap <silent> <F3> :e %:h<CR>
-
-" activamos matchit
-set nocompatible
+" matchit settings
 runtime macros/matchit.vim
 
-" cargamos fichero de tags
-set tags=tags
-
-" Undo
+" undo and undotree settings
 set undofile
 set history=700
 set undodir=$HOME/.vimundo
 nnoremap <F4> :UndotreeToggle<cr>
 
-" Desactivamos timeout de la tecla leader
+" leader key settings
 set ttimeout
 set ttimeoutlen=0
 let mapleader=","
 
-" Syntastic
+" syntastic settings
 let g:syntastic_html_checkers=['']
 let g:syntastic_less_checkers=['']
 let g:syntastic_css_checkers=['']
 let g:syntastic_javascript_checkers=['']
-" let g:syntastic_javascript_checkers = ['eslint']
 
-" Teclas per anar al principi o final de la linea en modo insert
-inoremap <C-e> <C-o>$
-inoremap <C-a> <C-o>0
-
-" shortcut for escape...
-imap jj <Esc>
-
-" Buffergator
+" buffergator settings
 let g:buffergator_viewport_split_policy = "B"
 let g:buffergator_sort_regime = "basename"
 let g:buffergator_show_full_directory_path = 0
 
-" less to css
+" lesstocss settings
 let g:lesscss_on = 0
 
-"Open NERDTree with Ctrl-n
+" nerd settings
 map <F5> :NERDTreeToggle<CR>
 
-set hidden " current buffer can be put into background
+" netrw settings
+let g:netrw_list_hide= '.*\.pyc$'
+set wildmode=longest,list,full
+nnoremap <silent> <F3> :e %:h<CR>
+
+" beautify settings
+map <c-f> :call JsBeautify()<cr>
+autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
+autocmd FileType javascript.jsx noremap <buffer>  <c-f> :call JsxBeautify()<cr>
+autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
+autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
+autocmd FileType scss noremap <buffer> <c-f> :call CSSBeautify()<cr>
+
+" react settings
+let g:jsx_ext_required = 0
+
+" generic shortcuts
+inoremap <C-e> <C-o>$
+inoremap <C-a> <C-o>0
+imap jj <Esc>
