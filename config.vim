@@ -40,7 +40,8 @@ Plugin 'othree/html5.vim', { 'for': ['html', 'javascript'] }
 Plugin 'tpope/vim-haml', { 'for': 'haml'}
 
 " python
-Plugin 'hdima/python-syntax.git', { 'for': 'python' }
+Plugin 'klen/python-mode', { 'for': 'python' }
+Plugin 'mitsuhiko/vim-python-combined', { 'for': 'python' }
 Plugin 'vim-scripts/indentpython.vim.git', { 'for': 'python' }
 
 " javascript
@@ -127,8 +128,14 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 " python settings
-let python_highlight_all = 1
-let python_version_2 = 1
+let g:pymode_syntax = 1
+let g:pymode_syntax_all = 1
+let g:pymode_syntax_indent_errors = g:pymode_syntax_all
+let g:pymode_syntax_space_errors = g:pymode_syntax_all
+let g:pymode_virtualenv = 1
+let g:pymode_lint = 1
+let g:pymode_lint_checker = "pyflakes,pep8"
+let g:pymode_lint_ignore="E501,W601,C0110"
 
 " emmet settings
 let g:user_emmet_leader_key='<C-x>'
