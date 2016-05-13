@@ -213,6 +213,8 @@ imap jj <Esc>
 " Buffergator
 let g:buffergator_viewport_split_policy = "B"
 let g:buffergator_sort_regime = "basename"
+let g:buffergator_show_full_directory_path = 0
+let g:buffergator_hsplit_size = 10
 
 " less to css
 let g:lesscss_on = 0
