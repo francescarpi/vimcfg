@@ -63,7 +63,7 @@ call vundle#end()
 let g:airline_powerline_fonts=1
 let g:airline_left_sep=''
 let g:airline_right_sep=''
-let g:airline_theme='solarized'
+let g:airline_theme='bubblegum'
 
 " ctrlp settings
 let g:ctrlp_working_path_mode = 'a'
@@ -113,11 +113,9 @@ filetype plugin indent on
 syntax on
 syntax enable
 set background=dark
-" colorscheme gruvbox
-" let g:gruvbox_termcolors = 256
-" let g:gruvbox_contrast_dark='hard' " hard, medium, soft
-colorscheme solarized
-let g:solarized_termcolors=256
+colorscheme gruvbox
+let g:gruvbox_termcolors = 256
+let g:gruvbox_contrast_dark='hard' " hard, medium, soft
 
 " file type detection and plugin
 filetype on
