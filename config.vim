@@ -31,7 +31,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'morhetz/gruvbox'
 Plugin 'ryanoasis/vim-devicons'
-Plugin 'sickill/vim-monokai'
+Plugin 'chriskempson/tomorrow-theme'
 
 " html
 Plugin 'gregsexton/MatchTag', { 'for': ['html', 'javascript'] }
@@ -112,10 +112,11 @@ filetype plugin indent on
 " theme settings
 syntax on
 syntax enable
-set background=dark
-colorscheme gruvbox
-let g:gruvbox_termcolors = 256
-let g:gruvbox_contrast_dark='hard' " hard, medium, soft
+" set background=dark
+" colorscheme gruvbox
+" let g:gruvbox_termcolors = 256
+" let g:gruvbox_contrast_dark='hard' " hard, medium, soft
+colorscheme Tomorrow-Night-Bright
 
 " file type detection and plugin
 filetype on
