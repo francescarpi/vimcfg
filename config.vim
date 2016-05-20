@@ -25,6 +25,7 @@ Plugin 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plugin 'rking/ag.vim', { 'on': 'Ag' }
 Plugin 'tpope/vim-fugitive'
 Plugin 'editorconfig/editorconfig-vim'
+Plugin 'reedes/vim-wheel'
 
 " themes
 Plugin 'altercation/vim-colors-solarized'
@@ -32,6 +33,8 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'morhetz/gruvbox'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'chriskempson/tomorrow-theme'
+Plugin 'reedes/vim-colors-pencil'
+Plugin 'reedes/vim-thematic'
 
 " html
 Plugin 'gregsexton/MatchTag', { 'for': ['html', 'javascript'] }
@@ -63,7 +66,6 @@ call vundle#end()
 let g:airline_powerline_fonts=1
 let g:airline_left_sep=''
 let g:airline_right_sep=''
-let g:airline_theme='bubblegum'
 
 " ctrlp settings
 let g:ctrlp_working_path_mode = 'a'
@@ -112,11 +114,23 @@ filetype plugin indent on
 " theme settings
 syntax on
 syntax enable
-" set background=dark
-" colorscheme gruvbox
-" let g:gruvbox_termcolors = 256
-" let g:gruvbox_contrast_dark='hard' " hard, medium, soft
-colorscheme Tomorrow-Night-Bright
+let g:thematic#themes = {
+\   'gruvbox' :{
+\       'colorscheme': 'gruvbox',
+\       'background': 'dark',
+\       'airline-theme': 'bubblegum',
+\       'transparency': 50
+\   },
+\   'tomorrow': {
+\       'colorscheme': 'Tomorrow-Night-Bright'
+\   },
+\ }
+let g:thematic#theme_name = 'gruvbox'
+let g:gruvbox_termcolors = 256
+let g:gruvbox_contrast_dark='hard'
+let g:gruvbox_italic=1
+let g:gruvbox_invert_signs=1
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
 " file type detection and plugin
 filetype on
@@ -182,3 +196,7 @@ imap jj <Esc>
 
 " delimitmate settings
 let delimitMate_expand_cr = 1
+
+" disable folding
+set foldlevelstart=99
+set foldlevel=99
