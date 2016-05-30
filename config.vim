@@ -19,9 +19,6 @@ Plugin 'vim-airline/vim-airline-themes.git'
 Plugin 'Chiel92/vim-autoformat.git'
 Plugin 'terryma/vim-multiple-cursors.git'
 Plugin 'Yggdroot/indentLine.git'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plugin 'rking/ag.vim', { 'on': 'Ag' }
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'reedes/vim-wheel'
@@ -175,9 +172,6 @@ let g:buffergator_show_full_directory_path = 0
 
 " lesstocss settings
 let g:lesscss_on = 0
-
-" nerd settings
-map <F5> :NERDTreeToggle<CR>
 
 " netrw settings
 let g:netrw_list_hide= '.*\.pyc$'
