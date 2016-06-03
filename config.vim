@@ -24,12 +24,7 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'reedes/vim-wheel'
 
 " themes
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'flazz/vim-colorschemes'
 Plugin 'morhetz/gruvbox'
-Plugin 'chriskempson/tomorrow-theme'
-Plugin 'reedes/vim-colors-pencil'
-Plugin 'reedes/vim-thematic'
 
 " html
 Plugin 'gregsexton/MatchTag', { 'for': ['html', 'javascript'] }
@@ -109,18 +104,8 @@ filetype plugin indent on
 " theme settings
 syntax on
 syntax enable
-let g:thematic#themes = {
-\   'gruvbox' :{
-\       'colorscheme': 'gruvbox',
-\       'background': 'dark',
-\       'airline-theme': 'bubblegum',
-\       'transparency': 50
-\   },
-\   'tomorrow': {
-\       'colorscheme': 'Tomorrow-Night-Bright'
-\   },
-\ }
-let g:thematic#theme_name = 'gruvbox'
+set background=dark
+colorscheme gruvbox
 let g:gruvbox_termcolors = 256
 let g:gruvbox_contrast_dark='hard'
 let g:gruvbox_italic=1
