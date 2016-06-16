@@ -10,7 +10,7 @@ Plugin 'ctrlpvim/ctrlp.vim.git'
 Plugin 'tacahiroy/ctrlp-funky.git'
 Plugin 'rbgrouleff/bclose.vim.git'
 Plugin 'jeetsukumaran/vim-buffergator'
-Plugin 'scrooloose/syntastic.git', {'for': ['python', 'javascript', 'javascript.jsx']}
+Plugin 'scrooloose/syntastic.git', {'for': ['python', 'javascript']}
 Plugin 'tomtom/tcomment_vim.git'
 Plugin 'SirVer/ultisnips.git'
 Plugin 'mbbill/undotree.git'
