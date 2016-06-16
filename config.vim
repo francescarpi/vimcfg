@@ -10,12 +10,10 @@ Plugin 'ctrlpvim/ctrlp.vim.git'
 Plugin 'tacahiroy/ctrlp-funky.git'
 Plugin 'rbgrouleff/bclose.vim.git'
 Plugin 'jeetsukumaran/vim-buffergator'
-Plugin 'scrooloose/syntastic.git', {'for': ['python', 'javascript']}
+Plugin 'scrooloose/syntastic.git', {'for': ['python', 'javascript', 'javascript.jsx']}
 Plugin 'tomtom/tcomment_vim.git'
 Plugin 'SirVer/ultisnips.git'
 Plugin 'mbbill/undotree.git'
-Plugin 'vim-airline/vim-airline.git'
-Plugin 'vim-airline/vim-airline-themes.git'
 Plugin 'Chiel92/vim-autoformat.git'
 Plugin 'terryma/vim-multiple-cursors.git'
 Plugin 'Yggdroot/indentLine.git'
@@ -52,11 +50,18 @@ Plugin 'plasticboy/vim-markdown.git', { 'for': ['markdown'] }
 
 call vundle#end()
 
-" airline settings
-let g:airline_powerline_fonts=1
-let g:airline_left_sep=''
-let g:airline_right_sep=''
-let g:airline_theme='papercolor'
+" theme settings
+syntax on
+syntax enable
+set background=dark
+let g:gruvbox_termcolors = 256
+let g:gruvbox_contrast_dark='hard'
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+colorscheme gruvbox
+
+" statusline
+set statusline=%t%m%<\ %=%#warningmsg#%{SyntasticStatuslineFlag()}%*\ %y\ %l\ %p%%
+set laststatus=2
 
 " ctrlp settings
 let g:ctrlp_working_path_mode = 'a'
@@ -102,17 +107,6 @@ set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
 set expandtab
 filetype plugin indent on
 
-" theme settings
-syntax on
-syntax enable
-set background=dark
-colorscheme gruvbox
-let g:gruvbox_termcolors = 256
-let g:gruvbox_contrast_dark='hard'
-let g:gruvbox_italic=1
-let g:gruvbox_invert_signs=1
-let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-
 " file type detection and plugin
 filetype on
 filetype plugin on
@@ -144,12 +138,12 @@ set ttimeoutlen=0
 let mapleader=","
 
 " syntastic settings
-let g:syntastic_html_checkers=['']
-let g:syntastic_less_checkers=['']
-let g:syntastic_css_checkers=['']
-let g:syntastic_javascript_checkers=['']
+" https://github.com/jaxbot/syntastic-react
+let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_enable_signs=0
-let g:syntastic_check_on_open=0
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 " buffergator settings
 let g:buffergator_viewport_split_policy = "B"
