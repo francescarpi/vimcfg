@@ -47,6 +47,8 @@ Plugin 'vitalk/vim-lesscss.git', { 'for': ['less'] }
 
 " mardkdown
 Plugin 'plasticboy/vim-markdown.git', { 'for': ['markdown'] }
+Plugin 'kannokanno/previm'
+Plugin 'tyru/open-browser.vim.git'
 
 call vundle#end()
 
@@ -80,7 +82,7 @@ map <C-b> :CtrlPBuffer<CR>
 " general settings
 set number " show line number
 set colorcolumn=80 " show vertical line at column
-set cursorline " show horizontal line at cursor position
+" set cursorline " show horizontal line at cursor position
 set wildmenu " enhanced command line completion
 set encoding=utf8 " default encoding
 set mouse=a " mouse settings
@@ -171,3 +173,4 @@ let delimitMate_expand_cr = 1
 " disable folding
 set foldlevelstart=99
 set foldlevel=99
+

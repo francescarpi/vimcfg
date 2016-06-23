@@ -1,5 +1,5 @@
 snippet i18 "I18n" w
-{I18n.t("${1}")}
+{this.context.t('${1}')}
 endsnippet
 
 snippet comp "Component" w
@@ -7,7 +7,7 @@ snippet comp "Component" w
  * Project: ${1}
  * Module: ${4}`!p snip.rv = path`
  */
-import React from "react"
+import React from 'react'
 
 class ${3} extends React.Component {
 
