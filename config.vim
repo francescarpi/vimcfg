@@ -62,7 +62,7 @@ let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 colorscheme gruvbox
 
 " statusline
-set statusline=%t%m%<\ %=%#warningmsg#%{SyntasticStatuslineFlag()}%*\ %y\ %l\ %p%%
+set statusline=%f%m%<\ %=%#warningmsg#%{SyntasticStatuslineFlag()}%*\ %y\ %l\ %p%%
 set laststatus=2
 
 " ctrlp settings
