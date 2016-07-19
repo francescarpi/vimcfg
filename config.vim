@@ -117,6 +117,8 @@ filetype plugin on
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+" UltiSnips filetype automatic
+autocmd FileType * exec 'UltiSnipsAddFiletypes ' . expand('<amatch>')
 
 " python settings
 let python_highlight_all = 1
