@@ -20,6 +20,7 @@ Plugin 'Yggdroot/indentLine.git'
 Plugin 'mileszs/ack.vim'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'reedes/vim-wheel'
+Plugin 'francoiscabrol/ranger.vim'
 
 " themes
 Plugin 'morhetz/gruvbox'
