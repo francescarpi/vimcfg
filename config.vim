@@ -20,7 +20,7 @@ Plugin 'Yggdroot/indentLine.git'
 Plugin 'mileszs/ack.vim'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'reedes/vim-wheel'
-Plugin 'francoiscabrol/ranger.vim'
+Plugin 'vifm/vifm.vim'
 
 " themes
 Plugin 'morhetz/gruvbox'
@@ -160,7 +160,7 @@ let g:lesscss_on = 0
 " netrw settings
 let g:netrw_list_hide= '.*\.pyc$'
 set wildmode=longest,list,full
-nnoremap <silent> <F3> :e %:h<CR>
+nnoremap <silent> <F3> :EditVifm<CR>
 
 " react settings
 let g:jsx_ext_required = 0
