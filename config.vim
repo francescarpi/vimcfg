@@ -17,7 +17,6 @@ Plugin 'mbbill/undotree.git'
 Plugin 'Chiel92/vim-autoformat.git'
 Plugin 'terryma/vim-multiple-cursors.git'
 Plugin 'Yggdroot/indentLine.git'
-Plugin 'mileszs/ack.vim'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'reedes/vim-wheel'
 Plugin 'francoiscabrol/ranger.vim'
@@ -176,8 +175,3 @@ let delimitMate_expand_cr = 1
 " disable folding
 set foldlevelstart=99
 set foldlevel=99
-
-" ack
-if executable('ag')
-  let g:ackprg = 'ag --vimgrep'
-endif
