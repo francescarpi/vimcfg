@@ -175,3 +175,6 @@ let delimitMate_expand_cr = 1
 " disable folding
 set foldlevelstart=99
 set foldlevel=99
+
+" indentline
+let g:indentLine_char = '┆'
