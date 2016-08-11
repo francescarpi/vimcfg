@@ -19,7 +19,7 @@ Plugin 'terryma/vim-multiple-cursors.git'
 Plugin 'Yggdroot/indentLine.git'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'reedes/vim-wheel'
-Plugin 'francoiscabrol/ranger.vim'
+Plugin 'vifm/vifm.vim'
 
 " themes
 Plugin 'morhetz/gruvbox'
@@ -178,3 +178,6 @@ set foldlevel=99
 
 " indentline
 let g:indentLine_char = '┆'
+
+" vifm
+map <leader>f :EditVifm<CR>
