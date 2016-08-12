@@ -144,9 +144,8 @@ let mapleader=","
 " syntastic settings
 " https://github.com/jaxbot/syntastic-react
 let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_enable_signs=0
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_check_on_wq = 0
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
+map <F5> :SyntasticCheck<CR>
 
 " buffergator settings
 let g:buffergator_viewport_split_policy = "B"
