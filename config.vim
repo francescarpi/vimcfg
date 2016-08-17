@@ -23,6 +23,7 @@ Plugin 'vifm/vifm.vim'
 
 " themes
 Plugin 'morhetz/gruvbox'
+Plugin 'vim-scripts/summerfruit256.vim'
 
 " html
 Plugin 'gregsexton/MatchTag', { 'for': ['html', 'javascript'] }
@@ -55,11 +56,9 @@ call vundle#end()
 " theme settings
 syntax on
 syntax enable
-set background=dark
-let g:gruvbox_termcolors = 256
-let g:gruvbox_contrast_dark='hard'
-let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-colorscheme gruvbox
+set t_Co=256
+set background=light
+colorscheme summerfruit256
 
 " statusline
 set statusline=%f%m%<\ %=%#warningmsg#%{SyntasticStatuslineFlag()}%*\ %y\ %l\ %p%%
@@ -158,7 +157,6 @@ let g:lesscss_on = 0
 " netrw settings
 let g:netrw_list_hide= '.*\.pyc$'
 set wildmode=longest,list,full
-nnoremap <silent> <F3> :e %:h<CR>
 
 " react settings
 let g:jsx_ext_required = 0
