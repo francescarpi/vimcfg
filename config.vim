@@ -24,6 +24,10 @@ Plugin 'vifm/vifm.vim'
 " themes
 Plugin 'morhetz/gruvbox'
 Plugin 'vim-scripts/summerfruit256.vim'
+Plugin 'Slashbunny/vim-colorsamplerpack'
+Plugin 'xolox/vim-colorscheme-switcher'
+Plugin 'xolox/vim-misc'
+Plugin 'trevorrjohn/vim-obsidian'
 
 " html
 Plugin 'gregsexton/MatchTag', { 'for': ['html', 'javascript'] }
@@ -54,11 +58,12 @@ Plugin 'tyru/open-browser.vim.git'
 call vundle#end()
 
 " theme settings
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+set t_ut=
+set background=dark
+colorscheme gruvbox
 syntax on
 syntax enable
-set t_Co=256
-set background=light
-colorscheme summerfruit256
 
 " statusline
 set statusline=%f%m%<\ %=%#warningmsg#%{SyntasticStatuslineFlag()}%*\ %y\ %l\ %p%%
