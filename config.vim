@@ -61,7 +61,7 @@ call vundle#end()
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set t_ut=
 set background=dark
-colorscheme gruvbox
+colorscheme summerfruit256
 syntax on
 syntax enable
 
