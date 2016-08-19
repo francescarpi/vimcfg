@@ -169,7 +169,7 @@ let g:jsx_ext_required = 0
 " generic shortcuts
 inoremap <C-e> <C-o>$
 inoremap <C-a> <C-o>0
-imap jj <Esc>
+imap jk <Esc>
 
 " delimitmate settings
 let delimitMate_expand_cr = 1
