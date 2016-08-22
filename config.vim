@@ -24,6 +24,7 @@ Plugin 'vifm/vifm.vim'
 " themes
 Plugin 'morhetz/gruvbox'
 Plugin 'vim-scripts/summerfruit256.vim'
+Plugin 'freeo/vim-kalisi'
 
 " html
 Plugin 'gregsexton/MatchTag', { 'for': ['html', 'javascript'] }
@@ -56,7 +57,10 @@ call vundle#end()
 " theme settings
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set t_ut=
-colorscheme summerfruit256
+set t_Co=256
+let &t_AB="\e[48;5;%dm"
+let &t_AF="\e[38;5;%dm"
+colorscheme kalisi
 syntax on
 syntax enable
 
