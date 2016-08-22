@@ -24,10 +24,6 @@ Plugin 'vifm/vifm.vim'
 " themes
 Plugin 'morhetz/gruvbox'
 Plugin 'vim-scripts/summerfruit256.vim'
-Plugin 'Slashbunny/vim-colorsamplerpack'
-Plugin 'xolox/vim-colorscheme-switcher'
-Plugin 'xolox/vim-misc'
-Plugin 'trevorrjohn/vim-obsidian'
 
 " html
 Plugin 'gregsexton/MatchTag', { 'for': ['html', 'javascript'] }
@@ -60,7 +56,6 @@ call vundle#end()
 " theme settings
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set t_ut=
-set background=dark
 colorscheme summerfruit256
 syntax on
 syntax enable
