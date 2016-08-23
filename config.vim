@@ -57,10 +57,10 @@ call vundle#end()
 " theme settings
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set t_ut=
-set t_Co=256
-let &t_AB="\e[48;5;%dm"
-let &t_AF="\e[38;5;%dm"
-colorscheme kalisi
+set background=dark
+let g:gruvbox_contrast_dark="hard"
+let g:gruvbox_italic=1
+colorscheme gruvbox
 syntax on
 syntax enable
 
