@@ -101,6 +101,7 @@ set hidden " current buffer can be put into background
 set incsearch
 set nohlsearch
 set ignorecase
+nnoremap <F3> :set hlsearch!<CR>
 
 " backups disabled
 set nobackup
