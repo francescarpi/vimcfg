@@ -58,7 +58,7 @@ call vundle#end()
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set t_ut=
 set background=dark
-let g:gruvbox_contrast_dark="hard"
+let g:gruvbox_contrast_dark="soft"
 let g:gruvbox_italic=1
 colorscheme gruvbox
 syntax on
