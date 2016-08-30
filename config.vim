@@ -35,7 +35,6 @@ Plugin 'tpope/vim-haml', { 'for': 'haml'}
 " python
 Plugin 'hdima/python-syntax.git', { 'for': 'python' }
 Plugin 'vim-scripts/indentpython.vim.git', { 'for': 'python' }
-Plugin 'fisadev/vim-isort', { 'for': 'python' }
 
 " javascript
 Plugin 'othree/yajs.vim', { 'for': 'javascript' }
