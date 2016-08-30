@@ -184,3 +184,7 @@ let g:indentLine_char = '┆'
 
 " vifm
 map <leader>f :EditVifm<CR>
+
+" tab navigation
+nnoremap <C-h> :tabprevious<CR>
+nnoremap <C-l> :tabnext<CR>
