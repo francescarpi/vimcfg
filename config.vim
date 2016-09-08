@@ -42,6 +42,7 @@ Plugin 'maksimr/vim-jsbeautify', { 'for': 'javascript' }
 Plugin 'wizicer/vim-jison', { 'for': 'jison' }
 Plugin 'mxw/vim-jsx', { 'for': 'javascript' }
 Plugin 'pangloss/vim-javascript.git', { 'for': ['html', 'javascript'] }
+Plugin 'leafgarland/typescript-vim'
 
 " css
 Plugin 'groenewege/vim-less.git', { 'for': ['less'] }
@@ -188,3 +189,6 @@ map <leader>f :EditVifm<CR>
 " tab navigation
 nnoremap <C-h> :tabprevious<CR>
 nnoremap <C-l> :tabnext<CR>
+
+" utils
+map <F6> :%!python -m json.tool<CR>
