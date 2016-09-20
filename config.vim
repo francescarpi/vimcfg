@@ -66,8 +66,7 @@ syntax on
 syntax enable
 
 " statusline
-" set statusline=%f%m%<\ %=%#warningmsg#%{SyntasticStatuslineFlag()}%*\ %y\ %l\ %p%%
-set statusline=%f%m%<\ %=%#warningmsg#%*\ %y\ %l\ %p%%
+set statusline=%f%m%<\ %=%#warningmsg#%{validator#get_status_string()}%*\ %y\ %l\ %p%%
 set laststatus=2
 
 " ctrlp settings
@@ -150,6 +149,7 @@ let mapleader=","
 " validator
 let g:validator_javascript_checkers = ['eslint']
 let g:validator_python_checkers = ['flake8']
+" let g:validator_python_django_checkers = ['flake8']
 
 " buffergator settings
 let g:buffergator_viewport_split_policy = "B"
