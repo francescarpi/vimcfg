@@ -149,6 +149,7 @@ let mapleader=","
 " validator
 let g:validator_javascript_checkers = ['eslint']
 let g:validator_python_checkers = ['flake8']
+let g:validator_error_msg_format = "[ ● %d/%d issues ]"
 " let g:validator_python_django_checkers = ['flake8']
 
 " buffergator settings
