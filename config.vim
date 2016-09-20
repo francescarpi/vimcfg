@@ -10,16 +10,15 @@ Plugin 'ctrlpvim/ctrlp.vim.git'
 Plugin 'tacahiroy/ctrlp-funky.git'
 Plugin 'rbgrouleff/bclose.vim.git'
 Plugin 'jeetsukumaran/vim-buffergator'
-Plugin 'scrooloose/syntastic.git', {'for': ['python', 'javascript']}
 Plugin 'tomtom/tcomment_vim.git'
 Plugin 'SirVer/ultisnips.git'
 Plugin 'mbbill/undotree.git'
 Plugin 'Chiel92/vim-autoformat.git'
 Plugin 'terryma/vim-multiple-cursors.git'
-" Plugin 'Yggdroot/indentLine.git'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'reedes/vim-wheel'
 Plugin 'vifm/vifm.vim'
+Plugin 'maralla/validator.vim'
 
 " themes
 Plugin 'morhetz/gruvbox'
@@ -67,7 +66,8 @@ syntax on
 syntax enable
 
 " statusline
-set statusline=%f%m%<\ %=%#warningmsg#%{SyntasticStatuslineFlag()}%*\ %y\ %l\ %p%%
+" set statusline=%f%m%<\ %=%#warningmsg#%{SyntasticStatuslineFlag()}%*\ %y\ %l\ %p%%
+set statusline=%f%m%<\ %=%#warningmsg#%*\ %y\ %l\ %p%%
 set laststatus=2
 
 " ctrlp settings
@@ -147,11 +147,9 @@ set ttimeout
 set ttimeoutlen=0
 let mapleader=","
 
-" syntastic settings
-" https://github.com/jaxbot/syntastic-react
-let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
-map <F5> :SyntasticCheck<CR>
+" validator
+let g:validator_javascript_checkers = ['eslint']
+let g:validator_python_checkers = ['flake8']
 
 " buffergator settings
 let g:buffergator_viewport_split_policy = "B"
