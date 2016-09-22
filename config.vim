@@ -147,10 +147,10 @@ set ttimeoutlen=0
 let mapleader=","
 
 " validator
+let g:validator_filetype_map = {"python.django": "python", "javascript.jsx": "javascript"}
 let g:validator_javascript_checkers = ['eslint']
 let g:validator_python_checkers = ['flake8']
 let g:validator_error_msg_format = "[ ● %d/%d issues ]"
-" let g:validator_python_django_checkers = ['flake8']
 
 " buffergator settings
 let g:buffergator_viewport_split_policy = "B"
@@ -178,9 +178,6 @@ let delimitMate_expand_cr = 1
 " disable folding
 set foldlevelstart=99
 set foldlevel=99
-
-" indentline
-let g:indentLine_char = '┆'
 
 " vifm
 map <leader>f :EditVifm<CR>
