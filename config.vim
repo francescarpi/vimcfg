@@ -151,10 +151,7 @@ let g:validator_filetype_map = {"python.django": "python", "javascript.jsx": "ja
 let g:validator_javascript_checkers = ['eslint']
 let g:validator_python_checkers = ['flake8']
 let g:validator_error_msg_format = "[ ● %d/%d issues ]"
-
-" hack for show ever the sign column
-autocmd BufEnter * exec 'sign define ValidatorEmpty'
-autocmd BufEnter * exec 'exe ":sign place 9999 line=1 name=ValidatorEmpty buffer=".bufnr("")'
+let g:validator_permament_sign = 1
 
 " buffergator settings
 let g:buffergator_viewport_split_policy = "B"
