@@ -5,7 +5,7 @@ call vundle#begin()
 
 " common
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'Raimondi/delimitMate.git'
+Plugin 'cohama/lexima.vim'
 Plugin 'ctrlpvim/ctrlp.vim.git'
 Plugin 'tacahiroy/ctrlp-funky.git'
 Plugin 'rbgrouleff/bclose.vim.git'
@@ -22,7 +22,7 @@ Plugin 'maralla/validator.vim'
 
 " themes
 Plugin 'morhetz/gruvbox'
-Plugin 'vim-scripts/summerfruit256.vim'
+Plugin 'francescarpi/summerfruit256.vim'
 Plugin 'freeo/vim-kalisi'
 
 " html
@@ -60,8 +60,9 @@ set t_Co=256
 set t_ut=
 set background=dark
 let g:gruvbox_contrast_dark="soft"
-" let g:gruvbox_italic=1
+let g:gruvbox_italic=1
 colorscheme gruvbox
+" colorscheme summerfruit256
 syntax on
 syntax enable
 
@@ -86,7 +87,7 @@ map <C-b> :CtrlPBuffer<CR>
 " general settings
 set number " show line number
 set colorcolumn=80 " show vertical line at column
-" set cursorline " show horizontal line at cursor position
+set cursorline " show horizontal line at cursor position
 set wildmenu " enhanced command line completion
 set encoding=utf8 " default encoding
 set mouse=a " mouse settings
@@ -172,9 +173,6 @@ let g:jsx_ext_required = 0
 inoremap <C-e> <C-o>$
 inoremap <C-a> <C-o>0
 imap jk <Esc>
-
-" delimitmate settings
-let delimitMate_expand_cr = 1
 
 " disable folding
 set foldlevelstart=99
