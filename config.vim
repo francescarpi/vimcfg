@@ -22,9 +22,6 @@ Plugin 'maralla/validator.vim'
 
 " themes
 Plugin 'morhetz/gruvbox'
-Plugin 'francescarpi/summerfruit256.vim'
-Plugin 'freeo/vim-kalisi'
-Plugin 'vim-scripts/xoria256.vim'
 
 " html
 Plugin 'gregsexton/MatchTag', { 'for': ['html', 'javascript'] }
@@ -56,22 +53,20 @@ Plugin 'tyru/open-browser.vim.git'
 call vundle#end()
 
 " theme settings
-let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set t_Co=256
 set t_ut=
 set background=dark
 let g:gruvbox_contrast_dark="soft"
 " let g:gruvbox_italic=1
 colorscheme gruvbox
-" colorscheme summerfruit256
-" colorscheme xoria256
 syntax on
 syntax enable
 
 " statusline
-" for powerline: install sudo pacman -S powerline powerline-fonts powerline-vim
-set statusline=%f%m%<\ %=%#warningmsg#%{validator#get_status_string()}%*\ %y\ %l\ %p%%
 set laststatus=2
+set statusline=%n:%f%m%<\ %=%#warningmsg#%{validator#get_status_string()}%*\ %y\ %l:%c\ %p%%
+au InsertEnter * hi StatusLine ctermfg=142
+au InsertLeave * hi StatusLine ctermfg=243
 
 " ctrlp settings
 let g:ctrlp_working_path_mode = 'a'
@@ -89,6 +84,7 @@ map <C-b> :CtrlPBuffer<CR>
 
 " general settings
 set number " show line number
+set relativenumber
 set colorcolumn=80 " show vertical line at column
 set cursorline " show horizontal line at cursor position
 set wildmenu " enhanced command line completion
@@ -156,7 +152,6 @@ let g:validator_javascript_checkers = ['eslint']
 let g:validator_python_checkers = ['flake8']
 let g:validator_error_msg_format = "[ ● %d/%d issues ]"
 let g:validator_permament_sign = 1
-let g:validator_auto_open_quickfix = 1
 
 " buffergator settings
 let g:buffergator_viewport_split_policy = "B"
