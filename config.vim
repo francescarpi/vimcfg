@@ -19,6 +19,8 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'reedes/vim-wheel'
 Plugin 'vifm/vifm.vim'
 Plugin 'maralla/validator.vim'
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-notes'
 
 " themes
 Plugin 'morhetz/gruvbox'
@@ -171,7 +173,7 @@ let g:jsx_ext_required = 0
 " generic shortcuts
 inoremap <C-e> <C-o>$
 inoremap <C-a> <C-o>0
-imap jk <Esc>
+imap jj <Esc>
 
 " disable folding
 set foldlevelstart=99
