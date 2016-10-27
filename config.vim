@@ -83,6 +83,16 @@ let g:ctrlp_funky_matchtype = 'line'
 let g:ctrlp_funky_syntax_highlight = 1
 map <C-f> :CtrlPFunky<CR>
 map <C-b> :CtrlPBuffer<CR>
+let g:ctrlp_buffer_func = {
+    \ 'enter': 'Function_Name_1',
+    \ 'exit':  'Function_Name_2',
+    \ }
+func! Function_Name_1()
+    set laststatus=0
+endfunc
+func! Function_Name_2()
+    set laststatus=2
+endfunc
 
 " general settings
 set number " show line number
