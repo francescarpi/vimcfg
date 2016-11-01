@@ -64,6 +64,10 @@ let g:gruvbox_contrast_dark="soft"
 colorscheme gruvbox
 syntax on
 syntax enable
+set guifont=Meslo\ LG\ S\ DZ\ for\ Powerline\ 11
+set guioptions-=m
+set guioptions-=T
+set guioptions-=r
 
 " statusline
 set laststatus=2
