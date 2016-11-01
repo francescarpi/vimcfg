@@ -21,6 +21,7 @@ Plugin 'vifm/vifm.vim'
 Plugin 'maralla/validator.vim'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-notes'
+Plugin 'jceb/vim-orgmode'
 
 " themes
 Plugin 'morhetz/gruvbox'
