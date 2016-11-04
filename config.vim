@@ -203,3 +203,8 @@ nnoremap <C-l> :tabnext<CR>
 
 " utils
 map <F6> :%!python -m json.tool<CR>
+
+" autocomplete
+inoremap   pumvisible() ? "\" : "\"
+inoremap  j ((pumvisible())?("\"):("j"))
+inoremap  k ((pumvisible())?("\"):("k"))
