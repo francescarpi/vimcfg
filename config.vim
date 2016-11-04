@@ -43,6 +43,7 @@ Plugin 'wizicer/vim-jison', { 'for': 'jison' }
 Plugin 'mxw/vim-jsx', { 'for': 'javascript' }
 Plugin 'pangloss/vim-javascript.git', { 'for': ['html', 'javascript'] }
 Plugin 'leafgarland/typescript-vim'
+Plugin 'flowtype/vim-flow'
 
 " css
 Plugin 'groenewege/vim-less.git', { 'for': ['less'] }
@@ -114,6 +115,7 @@ set backspace=indent,eol,start " make backspace behave in a sane manner
 set tags=tags " set tags files
 set nocompatible
 set hidden " current buffer can be put into background
+set ttyfast
 
 " search settings
 set incsearch
@@ -205,6 +207,6 @@ nnoremap <C-l> :tabnext<CR>
 map <F6> :%!python -m json.tool<CR>
 
 " autocomplete
-inoremap   pumvisible() ? "\" : "\"
-inoremap  j ((pumvisible())?("\"):("j"))
-inoremap  k ((pumvisible())?("\"):("k"))
+" inoremap   pumvisible() ? "\" : "\"
+" inoremap  j ((pumvisible())?("\"):("j"))
+" inoremap  k ((pumvisible())?("\"):("k"))
