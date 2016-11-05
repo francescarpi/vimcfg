@@ -21,7 +21,6 @@ Plugin 'vifm/vifm.vim'
 Plugin 'maralla/validator.vim'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-notes'
-Plugin 'jceb/vim-orgmode'
 
 " themes
 Plugin 'morhetz/gruvbox'
@@ -68,6 +67,7 @@ set guifont=Meslo\ LG\ S\ DZ\ for\ Powerline\ 11
 set guioptions-=m
 set guioptions-=T
 set guioptions-=r
+set guioptions-=L
 
 " statusline
 set laststatus=2
