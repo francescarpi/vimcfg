@@ -210,3 +210,7 @@ map <F6> :%!python -m json.tool<CR>
 " inoremap   pumvisible() ? "\" : "\"
 " inoremap  j ((pumvisible())?("\"):("j"))
 " inoremap  k ((pumvisible())?("\"):("k"))
+
+" find files
+set path+=**
+set wildmenu
