@@ -6,8 +6,6 @@ call vundle#begin()
 " common
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'cohama/lexima.vim'
-Plugin 'ctrlpvim/ctrlp.vim.git'
-Plugin 'tacahiroy/ctrlp-funky.git'
 Plugin 'rbgrouleff/bclose.vim.git'
 Plugin 'jeetsukumaran/vim-buffergator'
 Plugin 'tomtom/tcomment_vim.git'
@@ -76,46 +74,25 @@ set statusline=%n:%f%m%<\ %=%#warningmsg#%{validator#get_status_string()}%*\ %y\
 au InsertEnter * hi StatusLine ctermfg=142
 au InsertLeave * hi StatusLine ctermfg=243
 
-" ctrlp settings
-let g:ctrlp_working_path_mode = 'a'
-let g:ctrlp_max_height = 20
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
-  \ 'file': '\v\.(swp|pyc|py\~)$',
-  \ 'link': 'some_bad_symbolic_links',
-  \ }
-let g:ctrlp_extensions = ['funky']
-let g:ctrlp_funky_matchtype = 'line'
-let g:ctrlp_funky_syntax_highlight = 1
-map <C-f> :CtrlPFunky<CR>
-map <C-b> :CtrlPBuffer<CR>
-let g:ctrlp_buffer_func = {
-    \ 'enter': 'Function_Name_1',
-    \ 'exit':  'Function_Name_2',
-    \ }
-func! Function_Name_1()
-    set laststatus=0
-endfunc
-func! Function_Name_2()
-    set laststatus=2
-endfunc
-
 " general settings
 set number " show line number
 set relativenumber
 set colorcolumn=80 " show vertical line at column
 set cursorline " show horizontal line at cursor position
-set wildmenu " enhanced command line completion
 set encoding=utf8 " default encoding
 set mouse=a " mouse settings
 set title " show title in terminal window bar
 set pastetoggle=<F2> " key for pastetoggle
 set shell=zsh " default shell
 set backspace=indent,eol,start " make backspace behave in a sane manner
-set tags=tags " set tags files
 set nocompatible
 set hidden " current buffer can be put into background
 set ttyfast
+
+" Tags
+set tags=tags " set tags files
+command! MakeTags !ctags -R .
+command! MakeTagsES6 !es-ctags -R .
 
 " search settings
 set incsearch
@@ -181,8 +158,16 @@ let g:buffergator_show_full_directory_path = 0
 let g:lesscss_on = 0
 
 " netrw settings
+set wildmenu
+set wildignore+=*.pyc
+let g:netrw_banner=0 " disable annoying banner
+let g:netrw_browse_split=4 " open in prior window
+let g:netrw_altv=1 " open splits to the right
+let g:netrw_liststyle=3 " tree view
 let g:netrw_list_hide= '.*\.pyc$'
-set wildmode=longest,list,full
+"
+" find files
+set path+=**
 
 " react settings
 let g:jsx_ext_required = 0
@@ -192,9 +177,10 @@ inoremap <C-e> <C-o>$
 inoremap <C-a> <C-o>0
 imap jj <Esc>
 
-" disable folding
-set foldlevelstart=99
-set foldlevel=99
+" folding
+set foldenable
+set foldmethod=syntax
+autocmd FileType python set foldmethod=indent
 
 " vifm
 map <leader>f :EditVifm<CR>
@@ -206,11 +192,3 @@ nnoremap <C-l> :tabnext<CR>
 " utils
 map <F6> :%!python -m json.tool<CR>
 
-" autocomplete
-" inoremap   pumvisible() ? "\" : "\"
-" inoremap  j ((pumvisible())?("\"):("j"))
-" inoremap  k ((pumvisible())?("\"):("k"))
-
-" find files
-set path+=**
-set wildmenu
