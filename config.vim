@@ -181,6 +181,7 @@ imap jj <Esc>
 set foldenable
 set foldmethod=syntax
 autocmd FileType python set foldmethod=indent
+nnoremap <space> za
 
 " vifm
 map <leader>f :EditVifm<CR>
