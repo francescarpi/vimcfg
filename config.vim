@@ -7,10 +7,8 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'cohama/lexima.vim'
 Plugin 'rbgrouleff/bclose.vim.git'
-Plugin 'jeetsukumaran/vim-buffergator'
 Plugin 'tomtom/tcomment_vim.git'
 Plugin 'SirVer/ultisnips.git'
-Plugin 'mbbill/undotree.git'
 Plugin 'Chiel92/vim-autoformat.git'
 Plugin 'terryma/vim-multiple-cursors.git'
 Plugin 'editorconfig/editorconfig-vim'
@@ -37,8 +35,8 @@ Plugin 'vim-scripts/indentpython.vim.git', { 'for': 'python' }
 Plugin 'othree/yajs.vim', { 'for': 'javascript' }
 Plugin 'maksimr/vim-jsbeautify', { 'for': 'javascript' }
 Plugin 'wizicer/vim-jison', { 'for': 'jison' }
-Plugin 'mxw/vim-jsx', { 'for': 'javascript' }
 Plugin 'pangloss/vim-javascript.git', { 'for': ['html', 'javascript'] }
+Plugin 'mxw/vim-jsx', { 'for': 'javascript' }
 Plugin 'leafgarland/typescript-vim'
 Plugin 'flowtype/vim-flow'
 
@@ -58,7 +56,6 @@ set t_Co=256
 set t_ut=
 set background=dark
 let g:gruvbox_contrast_dark="soft"
-" let g:gruvbox_italic=1
 colorscheme gruvbox
 syntax on
 syntax enable
@@ -96,9 +93,9 @@ command! MakeTagsES6 !es-ctags -R .
 
 " search settings
 set incsearch
-set nohlsearch
+set hlsearch
 set ignorecase
-nnoremap <F3> :set hlsearch!<CR>
+nnoremap <F3> :noh<CR>
 
 " backups disabled
 set nobackup
@@ -125,17 +122,13 @@ autocmd FileType * exec 'UltiSnipsAddFiletypes ' . expand('<amatch>')
 let python_highlight_all = 1
 let python_version_2 = 1
 
-" emmet settings
-let g:user_emmet_leader_key='<C-x>'
-
 " matchit settings
 runtime macros/matchit.vim
 
-" undo and undotree settings
+" undo
 set undofile
 set history=700
 set undodir=$HOME/.vimundo
-nnoremap <F4> :UndotreeToggle<cr>
 
 " leader key settings
 set ttimeout
@@ -148,11 +141,6 @@ let g:validator_javascript_checkers = ['eslint']
 let g:validator_python_checkers = ['flake8']
 let g:validator_error_msg_format = "[ ● %d/%d issues ]"
 let g:validator_permament_sign = 1
-
-" buffergator settings
-let g:buffergator_viewport_split_policy = "B"
-let g:buffergator_sort_regime = "basename"
-let g:buffergator_show_full_directory_path = 0
 
 " lesstocss settings
 let g:lesscss_on = 0

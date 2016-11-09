@@ -7,10 +7,15 @@ snippet comp "Component" w
  * Project: ${1}
  * Module: ${4}`!p snip.rv = path`
  * vim:ft=javascript.jsx:
+ * @flow
  */
 import React, {PropTypes} from 'react'
 
+type Props = {}
+
 class ${3} extends React.Component {
+
+  props: Props
 
   render() {
     return (
@@ -29,6 +34,7 @@ snippet sbu "Header comment" w
  * Project: ${1}
  * Module: `!p snip.rv = path`
  * vim:ft=javascript.jsx:
+ * @flow
  */
 
 ${3}
@@ -82,4 +88,24 @@ constructor(props) {
   ${1}
 }
 
+endsnippet
+
+# HTML
+
+snippet div "div" w
+<div className="${1}">
+  ${2}
+</div>
+endsnippet
+
+snippet h1 "h1" w
+<h1>${1}</h1>
+endsnippet
+
+snippet h2 "h2" w
+<h2>${2}</h2>
+endsnippet
+
+snippet ifont "Italic font awesome" w
+<i className="fa ${1}"/>
 endsnippet
