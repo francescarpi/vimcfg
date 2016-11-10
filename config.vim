@@ -23,7 +23,7 @@ Plugin 'morhetz/gruvbox'
 
 " html
 Plugin 'gregsexton/MatchTag', { 'for': ['html', 'javascript'] }
-Plugin 'mattn/emmet-vim', { 'for': ['html', 'javascript'] }
+Plugin 'mattn/emmet-vim'
 Plugin 'othree/html5.vim', { 'for': ['html', 'javascript'] }
 Plugin 'tpope/vim-haml', { 'for': 'haml'}
 
@@ -42,7 +42,6 @@ Plugin 'flowtype/vim-flow'
 
 " css
 Plugin 'groenewege/vim-less.git', { 'for': ['less'] }
-Plugin 'vitalk/vim-lesscss.git', { 'for': ['less'] }
 
 " mardkdown
 Plugin 'plasticboy/vim-markdown.git', { 'for': ['markdown'] }
@@ -181,3 +180,11 @@ nnoremap <C-l> :tabnext<CR>
 " utils
 map <F6> :%!python -m json.tool<CR>
 
+" emmet
+let g:user_emmet_install_global = 0
+let g:user_emmet_settings = {
+\  'javascript.jsx' : {
+\      'extends' : 'jsx',
+\  },
+\}
+autocmd FileType html,css,javascript.jsx EmmetInstall
