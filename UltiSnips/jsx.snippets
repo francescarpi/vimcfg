@@ -41,19 +41,19 @@ ${3}
 endsnippet
 
 snippet cdu "Component did update" w
-componentDidUpdate(prevProps, prevState) {
+componentDidUpdate(prevProps: Props, prevState: Props) {
   ${1}
 }
 endsnippet
 
 snippet cwrp "Component will receive props" w
-componentWillReceiveProps(nextProps) {
+componentWillReceiveProps(nextProps: Props) {
   ${1}
 }
 endsnippet
 
 snippet cwu "Component will update" w
-componentWillUpdate(nextProps, nextState) {
+componentWillUpdate(nextProps: Props, nextState) {
   ${1}
 }
 endsnippet
@@ -71,7 +71,7 @@ componentWillMount() {
 endsnippet
 
 snippet scu "Should component update" w
-shouldComponentUpdate(nextProps, nextState) {
+shouldComponentUpdate(nextProps: Props, nextState) {
   ${1}
 }
 endsnippet
@@ -83,7 +83,7 @@ componentWillUnmount() {
 endsnippet
 
 snippet cc "Constructor" w
-constructor(props) {
+constructor(props: Props) {
   super(props)
   ${1}
 }

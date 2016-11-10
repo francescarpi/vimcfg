@@ -6,7 +6,6 @@ call vundle#begin()
 " common
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'cohama/lexima.vim'
-Plugin 'rbgrouleff/bclose.vim.git'
 Plugin 'tomtom/tcomment_vim.git'
 Plugin 'SirVer/ultisnips.git'
 Plugin 'Chiel92/vim-autoformat.git'
@@ -17,9 +16,11 @@ Plugin 'vifm/vifm.vim'
 Plugin 'maralla/validator.vim'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-notes'
+Plugin 'tmhedberg/simpylfold'
 
 " themes
 Plugin 'morhetz/gruvbox'
+Plugin 'chriskempson/vim-tomorrow-theme'
 
 " html
 Plugin 'gregsexton/MatchTag', { 'for': ['html', 'javascript'] }
@@ -35,13 +36,14 @@ Plugin 'vim-scripts/indentpython.vim.git', { 'for': 'python' }
 Plugin 'othree/yajs.vim', { 'for': 'javascript' }
 Plugin 'maksimr/vim-jsbeautify', { 'for': 'javascript' }
 Plugin 'wizicer/vim-jison', { 'for': 'jison' }
-Plugin 'pangloss/vim-javascript.git', { 'for': ['html', 'javascript'] }
+Plugin 'pangloss/vim-javascript', { 'for': ['html', 'javascript'] }
 Plugin 'mxw/vim-jsx', { 'for': 'javascript' }
 Plugin 'leafgarland/typescript-vim'
 Plugin 'flowtype/vim-flow'
 
 " css
-Plugin 'groenewege/vim-less.git', { 'for': ['less'] }
+Plugin 'hail2u/vim-css3-syntax'
+Plugin 'groenewege/vim-less.git'
 
 " mardkdown
 Plugin 'plasticboy/vim-markdown.git', { 'for': ['markdown'] }
@@ -167,15 +169,10 @@ imap jj <Esc>
 " folding
 set foldenable
 set foldmethod=syntax
-autocmd FileType python set foldmethod=indent
 nnoremap <space> za
 
 " vifm
 map <leader>f :EditVifm<CR>
-
-" tab navigation
-nnoremap <C-h> :tabprevious<CR>
-nnoremap <C-l> :tabnext<CR>
 
 " utils
 map <F6> :%!python -m json.tool<CR>
@@ -188,3 +185,6 @@ let g:user_emmet_settings = {
 \  },
 \}
 autocmd FileType html,css,javascript.jsx EmmetInstall
+
+" syntax fix
+autocmd BufEnter * :syntax sync fromstart
