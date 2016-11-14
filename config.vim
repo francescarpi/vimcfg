@@ -97,6 +97,7 @@ set incsearch
 set hlsearch
 set ignorecase
 nnoremap <F3> :noh<CR>
+highlight Search guibg=NONE guifg=NONE gui=underline ctermfg=NONE ctermbg=NONE cterm=underline
 
 " backups disabled
 set nobackup
