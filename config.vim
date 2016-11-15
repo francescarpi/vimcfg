@@ -68,7 +68,7 @@ set guioptions-=L
 
 " statusline
 set laststatus=2
-set statusline=%n:%f%m%<\ %=%#warningmsg#%{validator#get_status_string()}%*\ %y\ %l:%c\ %p%%
+set statusline=%n:%t%m%<\ %=%#warningmsg#%{validator#get_status_string()}%*\ %y\ %l:%c\ %p%%
 au InsertEnter * hi StatusLine ctermfg=142
 au InsertLeave * hi StatusLine ctermfg=243
 
