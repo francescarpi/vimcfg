@@ -21,10 +21,11 @@ Plugin 'tmhedberg/simpylfold'
 " themes
 Plugin 'morhetz/gruvbox'
 Plugin 'chriskempson/vim-tomorrow-theme'
+Plugin 'atelierbram/Base2Tone-vim'
 
 " html
 Plugin 'gregsexton/MatchTag', { 'for': ['html', 'javascript'] }
-Plugin 'mattn/emmet-vim'
+Plugin 'mattn/emmet-vim', { 'for': 'html' }
 Plugin 'othree/html5.vim', { 'for': ['html', 'javascript'] }
 Plugin 'tpope/vim-haml', { 'for': 'haml'}
 
@@ -33,33 +34,38 @@ Plugin 'hdima/python-syntax.git', { 'for': 'python' }
 Plugin 'vim-scripts/indentpython.vim.git', { 'for': 'python' }
 
 " javascript
-Plugin 'othree/yajs.vim', { 'for': 'javascript' }
 Plugin 'maksimr/vim-jsbeautify', { 'for': 'javascript' }
 Plugin 'wizicer/vim-jison', { 'for': 'jison' }
+Plugin 'othree/yajs.vim', { 'for': 'javascript' }
 Plugin 'pangloss/vim-javascript', { 'for': ['html', 'javascript'] }
+Plugin 'leafgarland/typescript-vim', { 'for': 'javascript' }
+Plugin 'flowtype/vim-flow', { 'for': 'javascript' }
 Plugin 'mxw/vim-jsx', { 'for': 'javascript' }
-Plugin 'leafgarland/typescript-vim'
-Plugin 'flowtype/vim-flow'
+Plugin 'othree/es.next.syntax.vim', { 'for': 'javascript' }
 
 " css
-Plugin 'hail2u/vim-css3-syntax'
-Plugin 'groenewege/vim-less.git'
+Plugin 'hail2u/vim-css3-syntax', { 'for': 'css' }
+Plugin 'groenewege/vim-less.git', { 'for': 'less' }
 
 " mardkdown
-Plugin 'plasticboy/vim-markdown.git', { 'for': ['markdown'] }
-Plugin 'kannokanno/previm'
-Plugin 'tyru/open-browser.vim.git'
+Plugin 'plasticboy/vim-markdown.git', { 'for': 'markdown' }
+Plugin 'kannokanno/previm', { 'for': 'markdown' }
+Plugin 'tyru/open-browser.vim.git', { 'for': 'markdown' }
 
 call vundle#end()
 
 " theme settings
-set t_Co=256
-set t_ut=
-set background=dark
-let g:gruvbox_contrast_dark="soft"
-colorscheme gruvbox
+" Font recomended: Source Code Pro for Powerline, Medium, 11
 syntax on
 syntax enable
+let &t_ZH="\e[3m"
+let &t_ZR="\e[23m"
+set background=dark
+let g:gruvbox_contrast_dark="hard"
+let g:gruvbox_italic=1
+colorscheme gruvbox
+
+" gui config
 set guifont=Meslo\ LG\ S\ DZ\ for\ Powerline\ 11
 set guioptions-=m
 set guioptions-=T
@@ -117,12 +123,10 @@ filetype plugin on
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-" UltiSnips filetype automatic
 autocmd FileType * exec 'UltiSnipsAddFiletypes ' . expand('<amatch>')
 
 " python settings
 let python_highlight_all = 1
-let python_version_2 = 1
 
 " matchit settings
 runtime macros/matchit.vim
@@ -159,7 +163,7 @@ let g:netrw_list_hide= '.*\.pyc$'
 " find files
 set path+=**
 
-" react settings
+" jsx settings
 let g:jsx_ext_required = 0
 
 " generic shortcuts
