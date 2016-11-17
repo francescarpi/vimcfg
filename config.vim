@@ -34,13 +34,9 @@ Plugin 'hdima/python-syntax.git', { 'for': 'python' }
 Plugin 'vim-scripts/indentpython.vim.git', { 'for': 'python' }
 
 " javascript
-Plugin 'maksimr/vim-jsbeautify', { 'for': 'javascript' }
-Plugin 'wizicer/vim-jison', { 'for': 'jison' }
-Plugin 'othree/yajs.vim', { 'for': 'javascript' }
-Plugin 'pangloss/vim-javascript', { 'for': ['html', 'javascript'] }
-Plugin 'leafgarland/typescript-vim', { 'for': 'javascript' }
-Plugin 'flowtype/vim-flow', { 'for': 'javascript' }
-Plugin 'mxw/vim-jsx', { 'for': 'javascript' }
+Plugin 'pangloss/vim-javascript', { 'for': 'javascript' }
+Plugin 'maxmellon/vim-jsx-pretty', { 'for': 'javascript' }
+Plugin 'othree/javascript-libraries-syntax.vim', { 'for': 'javascript' }
 Plugin 'othree/es.next.syntax.vim', { 'for': 'javascript' }
 
 " css
