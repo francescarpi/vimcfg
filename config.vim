@@ -20,8 +20,6 @@ Plugin 'tmhedberg/simpylfold'
 
 " themes
 Plugin 'morhetz/gruvbox'
-Plugin 'chriskempson/vim-tomorrow-theme'
-Plugin 'atelierbram/Base2Tone-vim'
 
 " html
 Plugin 'gregsexton/MatchTag', { 'for': ['html', 'javascript'] }
@@ -38,6 +36,7 @@ Plugin 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plugin 'maxmellon/vim-jsx-pretty', { 'for': 'javascript' }
 Plugin 'othree/javascript-libraries-syntax.vim', { 'for': 'javascript' }
 Plugin 'othree/es.next.syntax.vim', { 'for': 'javascript' }
+Plugin 'flowtype/vim-flow', { 'for': 'javascript' }
 
 " css
 Plugin 'hail2u/vim-css3-syntax', { 'for': 'css' }
