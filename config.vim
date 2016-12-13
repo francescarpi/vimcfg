@@ -33,7 +33,7 @@ Plugin 'vim-scripts/indentpython.vim.git', { 'for': 'python' }
 
 " javascript
 Plugin 'pangloss/vim-javascript', { 'for': 'javascript' }
-Plugin 'maxmellon/vim-jsx-pretty', { 'for': 'javascript' }
+Plugin 'mxw/vim-jsx', { 'for': 'javascript' }
 Plugin 'othree/javascript-libraries-syntax.vim', { 'for': 'javascript' }
 Plugin 'othree/es.next.syntax.vim', { 'for': 'javascript' }
 Plugin 'flowtype/vim-flow', { 'for': 'javascript' }
@@ -170,6 +170,7 @@ imap jj <Esc>
 set foldenable
 set foldmethod=syntax
 nnoremap <space> za
+set nofoldenable
 
 " vifm
 map <leader>f :EditVifm<CR>
