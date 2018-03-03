@@ -82,7 +82,7 @@ set encoding=utf8 " default encoding
 set mouse=a " mouse settings
 set title " show title in terminal window bar
 set pastetoggle=<F2> " key for pastetoggle
-set shell=zsh " default shell
+"set shell=zsh " default shell
 set backspace=indent,eol,start " make backspace behave in a sane manner
 set nocompatible
 set hidden " current buffer can be put into background
