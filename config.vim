@@ -17,6 +17,7 @@ Plugin 'maralla/validator.vim'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-notes'
 Plugin 'tmhedberg/simpylfold'
+Plugin 'kien/ctrlp.vim'
 
 " themes
 Plugin 'morhetz/gruvbox'
@@ -189,3 +190,6 @@ autocmd FileType html,css,javascript.jsx EmmetInstall
 
 " syntax fix
 autocmd BufEnter * :syntax sync fromstart
+
+" buffer remaps
+nnoremap <C-Tab> :bn<CR>
