@@ -19,6 +19,7 @@ Plugin 'xolox/vim-notes'
 Plugin 'tmhedberg/simpylfold'
 Plugin 'kien/ctrlp.vim'
 Plugin 'posva/vim-vue'
+Plugin 'dag/vim-fish'
 
 " themes
 Plugin 'morhetz/gruvbox'
