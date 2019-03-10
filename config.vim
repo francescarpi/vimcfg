@@ -60,7 +60,7 @@ let &t_ZH="\e[3m"
 let &t_ZR="\e[23m"
 set background=dark
 let g:gruvbox_contrast_dark="hard"
-let g:gruvbox_italic=1
+let g:gruvbox_italic=0
 colorscheme gruvbox
 
 " gui config
