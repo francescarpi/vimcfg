@@ -195,3 +195,6 @@ autocmd BufEnter * :syntax sync fromstart
 
 " buffer remaps
 nnoremap <C-Tab> :bn<CR>
+
+" notes
+let g:notes_directories = ['~/Dropbox/Shared Notes']
