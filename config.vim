@@ -18,8 +18,11 @@ Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-notes'
 Plugin 'tmhedberg/simpylfold'
 Plugin 'kien/ctrlp.vim'
-Plugin 'posva/vim-vue'
 Plugin 'dag/vim-fish'
+
+" vue
+Plugin 'posva/vim-vue'
+Plugin 'leafOfTree/vim-vue-plugin'
 
 " themes
 Plugin 'morhetz/gruvbox'
@@ -60,7 +63,7 @@ let &t_ZH="\e[3m"
 let &t_ZR="\e[23m"
 set background=dark
 let g:gruvbox_contrast_dark="hard"
-let g:gruvbox_italic=0
+let g:gruvbox_italic=1
 colorscheme gruvbox
 
 " gui config
@@ -198,3 +201,7 @@ nnoremap <C-Tab> :bn<CR>
 
 " notes
 let g:notes_directories = ['~/Dropbox/Shared Notes']
+
+" vue
+let g:vim_vue_plugin_load_full_syntax = 1
+autocmd BufRead,BufNewFile *.vue set filetype=vue
